@@ -10,7 +10,7 @@ const HomeCard = () => {
   <div className='flex flex-col ml-10 mr-10 border-2 border-t2/20 rounded-md mb-10'>
    <div className='flex space-x-10 items-center'>
     <div className='flex items-center  px-10 py-5'>
-     <img src="/public/avtar.png" className='w-10 h-10 rounded-full'/>
+     <img src="/avtar.png" className='w-10 h-10 rounded-full'/>
      <div className='flex flex-col'>
       <div className='flex items-center space-x-5 ml-3'>
         <h3 className='font-bold text-xs'>Noor Fatima</h3><span className='text-t2 text-[10px]'>Created a Hiring Post</span><span className='text-t2 text-[10px]'>2 Hrs</span>
@@ -26,7 +26,7 @@ const HomeCard = () => {
    {/* Person Asked Question */}
    <div className='flex space-x-10 items-center'>
     <div className='flex items-center  px-10 py-5'>
-     <img src="/public/avtar.png" className='w-10 h-10 rounded-full'/>
+     <img src="/avtar.png" className='w-10 h-10 rounded-full'/>
      <div className='flex flex-col'>
       <div className='flex items-center space-x-5 ml-3'>
         <h3 className='font-bold text-xs'>Noor Fatima</h3><span className='text-t2 text-[10px]'>Has Asked a Question</span><span className='text-t2 text-[10px]'>2 Hrs</span>
@@ -61,7 +61,7 @@ const HomeCard = () => {
    </div>
 
    <div className='flex space-x-5 items-center ml-10 mr-10 mb-10 w-full'>
-    <div><img src="/public/avtar.png" className='w-10 h-10 rounded-full'/></div>
+    <div><img src="/avtar.png" className='w-10 h-10 rounded-full'/></div>
     <div><input type="text" placeholder="Write an opinion.." className='text-xs w-96 outline-none text-t2'/></div>
     <div><RiSendPlane2Line className='text-xl cursor-pointer'/></div>
    </div>

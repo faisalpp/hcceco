@@ -45,7 +45,7 @@ const Login = () => {
      
      <div className='flex flex-col items-center text-white bg-t1 h-2/4 justify-center'>
        <div className='flex flex-col items-center mb-5'><h3 className='text-3xl'>LOGO</h3><h3 className='text-sm'>Sign in to your account</h3></div>
-       <div><img src="/public/Group.png" className='w-32 h-22'/></div>
+       <div><img src="/Group.png" className='w-32 h-22'/></div>
      </div>
 
      {/* Form Wrapper */}

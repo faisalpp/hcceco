@@ -9,7 +9,7 @@ import {GrDocument} from 'react-icons/gr'
 const CollegeInfoCard = () => {
   return (
     <div className='flex flex-col w-72 h-auto mb-5 ml-5 bg-white shadow-xl'>
-      <img src="/public/college.jpg" className='w-full h-32' />
+      <img src="/college.jpg" className='w-full h-32' />
       <div className='flex text-center py-2 text-xs bg-b3/40'>
         <h3>REM DEVI UNIVERSITY OF SCIENCE, ARTS, PARAMEDICAL...</h3>
       </div>

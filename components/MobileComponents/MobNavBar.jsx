@@ -11,7 +11,7 @@ const MobNavBar = () => {
       {/* Navbar Items Position */}
       <div className='grid grid-cols-14 items-center w-full'>
        {/* Navbar User Image Round */}
-       <div className='col-start-2'><img src="/public/avtar.png" className='rounded-full w-10 h-10'/></div>
+       <div className='col-start-2'><img src="/avtar.png" className='rounded-full w-10 h-10'/></div>
        {/* Search Bar */}
        <div style={{'borderWidth':'1px'}} className='col-start-6 col-end-6 flex items-center rounded-md border-t2 bg-b3/10 w-44 h-7'><input type="search" placeholder='Search' className='border-none w-full h-fit ring-0 bg-b3/10'/><RiSearch2Line className='mr-2'/></div>
              
