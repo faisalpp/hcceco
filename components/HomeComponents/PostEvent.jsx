@@ -1,14 +1,10 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import { BsPlusSquareFill } from 'react-icons/bs'
+import avtar from '../../src/images/avtar.png'
+
 
 const PostEvent = () => {
   
-  const test = new URL('../../src/assets/avtar/png', import.meta.url).href;
-  useEffect(() => {
-   console.log(test)   
-  }, [])
-  
-
   return (
     <>
     <div className='flex items-center space-x-5 justify-center'>
@@ -22,19 +18,19 @@ const PostEvent = () => {
        {/* Event Card */}
         <div className='relative w-42 h-36'>
          <div className='absolute top-1 z-10  text-center  text-white'><span className='ml-1 text-xs hover:underline cursor-pointer '>Manika</span><span className='relative top-1 left-14 bg-t3 w-5 h-5 px-1 py-1 rounded-full text-[10px]'>+5</span></div>
-          <img id="avtar" src="/src/assets/avtar.png" className='brightness-50 w-32 h-32 rounded-md'/>
+          <img id="avtar" src={avtar} className='brightness-50 w-32 h-32 rounded-md'/>
         </div>
         {/* Event Card END */}
        {/* Event Card */}
         <div className='relative w-42 h-36'>
          <div className='absolute top-1 z-10  text-center  text-white'><span className='ml-1 text-xs hover:underline cursor-pointer '>Manika</span><span className='relative top-1 left-14 bg-t3 w-5 h-5 px-1 py-1 rounded-full text-[10px]'>+5</span></div>
-          <img id="avtar" src="/avtar.png" className='brightness-50 w-32 h-32 rounded-md'/>
+          <img id="avtar" src={avtar} className='brightness-50 w-32 h-32 rounded-md'/>
         </div>
         {/* Event Card END */}
        {/* Event Card */}
         <div className='relative w-42 h-36'>
          <div className='absolute top-1 z-10  text-center  text-white'><span className='ml-1 text-xs hover:underline cursor-pointer '>Manika</span><span className='relative top-1 left-14 bg-t3 w-5 h-5 px-1 py-1 rounded-full text-[10px]'>+5</span></div>
-          <img id="avtar" src="/avtar.png" className='brightness-50 w-32 h-32 rounded-md'/>
+          <img id="avtar" src={avtar} className='brightness-50 w-32 h-32 rounded-md'/>
         </div>
         {/* Event Card END */}
     </div>
