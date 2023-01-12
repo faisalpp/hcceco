@@ -1,6 +1,8 @@
 import React from 'react'
+import { RiCloseCircleLine } from 'react-icons/ri';
 
-const CarousalCard = () => {
+
+const SuggestedLinksCard = () => {
   return (
     <div id="carousal-card" className='flex flex-col space-x-2 shadow-2xl w-60 h-32'>
     <span className='mt-2'><RiCloseCircleLine className='relative left-52 hover:text-t1 cursor-pointer'/></span>
@@ -16,4 +18,4 @@ const CarousalCard = () => {
   )
 }
 
-export default CarousalCard
+export default SuggestedLinksCard

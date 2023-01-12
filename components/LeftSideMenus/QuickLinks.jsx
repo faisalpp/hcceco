@@ -1,27 +1,24 @@
-import React from 'react'
+import React,{useState} from 'react'
+import DropDown from '../DropDown';
 
 const QuickLinks = () => {
+  const [quickLm1, setQuickLm1] = useState(true)
+  const [quickLm2, setQuickLm2] = useState(true)
+  const [quickLm3, setQuickLm3] = useState(true)
+  const [quickLm4, setQuickLm4] = useState(true)
+  const [quickLm5, setQuickLm5] = useState(true)
+  const [quickLm6, setQuickLm6] = useState(true)
   return (
-    <div className='w-64 h-72 bg-white'>
-          <div className='w-full text-center text-sm text-white py-3 bg-b1 rounded-t-md'>STUDY GOALS</div>
-          <div className='flex flex-col w-full ml-10 mt-5 space-y-8 text-sm mb-5'>
-            {/*Drop Down  */}
-          <div>
-           <div className="dropdown inline-block relative">
-           <button className="bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center">
-            <span className="mr-1">Dropdown</span>
-            <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
-           </button>
-           <ul className="dropdown-menu absolute hidden text-gray-700 pt-1">
-            <li className=""><a className="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">One</a></li>
-            <li className=""><a className="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Two</a></li>
-            <li className=""><a className="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Three is the magic number</a></li>
-           </ul>
-          </div>
-         </div>
+    <div className='w-64 h-auto bg-white'>
+     <div className='w-full text-center text-sm text-white py-3 bg-b1 rounded-t-md'>STUDY GOALS</div>
+     <DropDown degree="B.Tech" setState={setQuickLm1} state={quickLm1}/>
+     <DropDown degree="MBBS" setState={setQuickLm2} state={quickLm2}/>
+     <DropDown degree="MBA" setState={setQuickLm3} state={quickLm3}/>
+     <DropDown degree="DESIGN" setState={setQuickLm4} state={quickLm4}/>
+     <DropDown degree="LAW" setState={setQuickLm5} state={quickLm5}/>
+     <DropDown degree="SCIENCE" setState={setQuickLm6} state={quickLm6}/>
 
-          </div>
-        </div>
+    </div>
   )
 }
 

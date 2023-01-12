@@ -4,8 +4,6 @@ import { BsDot } from 'react-icons/bs'
 import { AppContext } from '../context/GlobalContext'
 
 const NotificationMenu = () => {
-    // const ntfState = useContext(NotificationContext)
-    const [showNotific, hideNotific] = useState(true)
     const nm = useContext(AppContext)
   return (
     <div id="main-wrapper" className={` ${nm.ntfState ? 'lg:absolute' : 'hidden'} z-20 w-full h-full bg-t1/70 -mt-2`}>
