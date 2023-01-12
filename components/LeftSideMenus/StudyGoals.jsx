@@ -9,7 +9,7 @@ const StudyGoals = () => {
             <div className='flex space-x-2 items-center cursor-pointer'><RiGovernmentLine className='text-t2'/><a className='hover:text-t1 hover:underline'>Top Colleges</a></div>
             <div className='flex space-x-2 items-center cursor-pointer'><RiFileList3Line className='text-t2'/><a className='hover:text-t1 hover:underline'>Top Courses</a></div>
             <div className='flex space-x-2 items-center cursor-pointer'><RiArticleLine className='text-t2'/><a className='hover:text-t1 hover:underline'>Top Exams</a></div>
-            <div className='flex space-x-2 items-center cursor-pointer'><RiEditLine className='text-t2'/><a className='hover:text-t1 hover:underline'>Write A Review</a></div>
+            <div className='flex space-x-2 items-center cursor-pointer'><RiEditLine className='text-t2'/><NavLink to="/write-review" className='hover:text-t1 hover:underline'>Write A Review</NavLink></div>
           </div>
         </div>
   )

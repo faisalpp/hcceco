@@ -18,7 +18,7 @@ const LatestAnnouncement = () => {
 
     </div>
      {/* More Link */}
-     <div id="more" className='text-t1 text-center text-xs underline'><a>Show More</a></div>
+     <div id="more" className='text-t1 text-center text-xs underline'><NavLink to="/latest-announcements">Show More</NavLink></div>
     </div>
   </div>
   )
