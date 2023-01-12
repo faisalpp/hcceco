@@ -26,7 +26,7 @@ function App() {
        <Route path="/edit-profile" element={<EditProfile/>}/>
        {/* Write A Review Page */}
        <Route path="/write-review" element={<WriteReview/>}/>
-       {/* Search Result Page */}
+       
        <Route path="/profile-search" element={<ProfileSearch/>}/>
 
       <Route path="/desclaimer" element={<Desclaimer/>}/>
