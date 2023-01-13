@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {MdLocationPin} from 'react-icons/md'
 import {IoBook} from 'react-icons/io5'
 import {FaRupeeSign} from 'react-icons/fa'
 import {AiOutlineLike,AiOutlineUserAdd} from 'react-icons/ai'
 import { TbArrowForwardUp } from 'react-icons/tb'
 import {GrDocument} from 'react-icons/gr'
+import { AppContext } from '../../context/GlobalContext'
 
 const CollegeInfoCard = () => {
+  const state = useContext(AppContext)
   return (
     <div className='flex flex-col w-72 h-auto mb-5 ml-5 bg-white shadow-xl'>
-      <img src="/college.jpg" className='w-full h-32' />
+      <img src="https://www.dropbox.com/s/kuxadvixibll95l/college.jpg?raw=1" className='w-full h-32' />
       <div className='flex text-center py-2 text-xs bg-b3/40'>
         <h3>REM DEVI UNIVERSITY OF SCIENCE, ARTS, PARAMEDICAL...</h3>
       </div>
@@ -38,7 +40,7 @@ const CollegeInfoCard = () => {
       <div className='flex mt-4 mb-2 space-x-5 justify-center'>
        <div className="flex items-center"><AiOutlineLike className='text-t1 text-lg'/><h3 className='text-xs'>155</h3></div>
        <div className="flex items-center"><AiOutlineUserAdd className='text-t1 text-lg'/><h3 className='text-xs'>155</h3></div>
-       <div className="flex items-center"><TbArrowForwardUp className='text-t1 text-lg'/><h3 className='text-xs'>155</h3></div>
+       <div className="flex items-center"><TbArrowForwardUp className='text-t1 text-lg'/><button onClick={()=>state.setShare(true)} className='text-xs'>155</button></div>
        <div className="flex items-center"><GrDocument className='text-t1 text-lg'/><h3 className='text-xs'>155</h3></div>
       </div>
     

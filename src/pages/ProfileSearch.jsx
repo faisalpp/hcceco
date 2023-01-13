@@ -1,12 +1,12 @@
 import React from 'react'
 import SearchBar from '../../components/SearchBar'
 import SearchCard from '../../components/SearchCard'
-import SearchLayout from '../../layouts/SearchLayout'
+import SearchLayout from './Layouts/SearchLayout'
 
 const ProfileSearch = () => {
   return (
     <SearchLayout>
-    <div className='flex flex-col bg-white w-full h-screen'>
+    <div className='flex flex-col bg-white w-full h-screen items-center'>
      {/* Heading Dynamic */}
      <div className='mt-10'><h3 className='text-t1 text-center text-2xl font-bold'>PROFILES</h3></div>
      {/* Wrapper Navigations plus search bar */}
@@ -20,7 +20,7 @@ const ProfileSearch = () => {
       <div className='w-1/2 mr-10'><SearchBar/></div>
      </div>
      {/* All Search Result Show Here */}
-     <div className='grid grid-cols-3 mt-10'>
+     <div className='grid grid-cols-3 mt-10 gap-5'>
        <SearchCard/>
        <SearchCard/>
        <SearchCard/>

@@ -10,7 +10,7 @@ const QuickLinks = () => {
   const [quickLm6, setQuickLm6] = useState(true)
   return (
     <div className='w-64 h-auto bg-white'>
-     <div className='w-full text-center text-sm text-white py-3 bg-b1 rounded-t-md'>STUDY GOALS</div>
+     <div className='w-full text-center text-sm text-white py-3 bg-b1 rounded-t-md'>QUICK LINKS</div>
      <DropDown degree="B.Tech" setState={setQuickLm1} state={quickLm1}/>
      <DropDown degree="MBBS" setState={setQuickLm2} state={quickLm2}/>
      <DropDown degree="MBA" setState={setQuickLm3} state={quickLm3}/>

@@ -16,19 +16,19 @@ const PostEvent = () => {
        {/* Event Card */}
         <div className='relative w-42 h-36'>
          <div className='absolute top-1 z-10  text-center  text-white'><span className='ml-1 text-xs hover:underline cursor-pointer '>Manika</span><span className='relative top-1 left-14 bg-t3 w-5 h-5 px-1 py-1 rounded-full text-[10px]'>+5</span></div>
-          <img id="avtar" src="/public/avtar.png" className='brightness-50 w-32 h-32 rounded-md'/>
+          <img src="https://www.dropbox.com/s/h4an5wsqmuued7z/avtar.PNG?raw=1" className='brightness-50 w-32 h-32 rounded-md'/>
         </div>
         {/* Event Card END */}
        {/* Event Card */}
         <div className='relative w-42 h-36'>
          <div className='absolute top-1 z-10  text-center  text-white'><span className='ml-1 text-xs hover:underline cursor-pointer '>Manika</span><span className='relative top-1 left-14 bg-t3 w-5 h-5 px-1 py-1 rounded-full text-[10px]'>+5</span></div>
-          <img id="avtar" src="/public/avtar.png" className='brightness-50 w-32 h-32 rounded-md'/>
+          <img  src="https://www.dropbox.com/s/h4an5wsqmuued7z/avtar.PNG?raw=1" className='brightness-50 w-32 h-32 rounded-md'/>
         </div>
         {/* Event Card END */}
        {/* Event Card */}
         <div className='relative w-42 h-36'>
          <div className='absolute top-1 z-10  text-center  text-white'><span className='ml-1 text-xs hover:underline cursor-pointer '>Manika</span><span className='relative top-1 left-14 bg-t3 w-5 h-5 px-1 py-1 rounded-full text-[10px]'>+5</span></div>
-          <img id="avtar" src="/public/avtar.png" className='brightness-50 w-32 h-32 rounded-md'/>
+          <img  src="https://www.dropbox.com/s/h4an5wsqmuued7z/avtar.PNG?raw=1" className='brightness-50 w-32 h-32 rounded-md'/>
         </div>
         {/* Event Card END */}
     </div>

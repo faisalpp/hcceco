@@ -1,7 +1,7 @@
 import React from 'react'
 import HomeCard from '../../components/HomeComponents/HomeCard'
 import MessageBox from '../../components/HomeComponents/MessageBox'
-import Layout from '../Layout'
+import Layout from './Layouts/Layout'
 import SearchBar from '../../components/SearchBar';
 import SuggestedLinks from '../../components/HomeComponents/SuggestedLinks';
 

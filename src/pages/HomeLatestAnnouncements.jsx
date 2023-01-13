@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../Layout'
+import Layout from './Layouts/Layout'
 import HomeCard from '../../components/HomeComponents/HomeCard'
 
 const HomeLatestAnnouncements = () => {

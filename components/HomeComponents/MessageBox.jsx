@@ -7,7 +7,7 @@ const MessageBox = () => {
    <div className='flex flex-col items-center border-2 border-b3 rounded-md px-10 py-3'>
     <div className='flex space-x-44 items-center'>
      <div className='flex items-center space-x-5 w-full'>
-      <img src="/avtar.png" className='w-9 h-8 rounded-full'/>
+      <img src="https://www.dropbox.com/s/h4an5wsqmuued7z/avtar.PNG?raw=1" className='w-9 h-8 rounded-full'/>
       <h3 className='text-t3'>What's in your mind, Argha?</h3>
      </div>
      {/*Comment Box Actions  */}

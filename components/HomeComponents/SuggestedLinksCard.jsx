@@ -7,7 +7,7 @@ const SuggestedLinksCard = () => {
     <div id="carousal-card" className='flex flex-col space-x-2 shadow-2xl w-60 h-32'>
     <span className='mt-2'><RiCloseCircleLine className='relative left-52 hover:text-t1 cursor-pointer'/></span>
     <div className='flex items-center space-x-3 ml-5'>
-     <img src='/avtar.png' className='w-12 h-10 rounded-full'/>
+     <img src='https://www.dropbox.com/s/h4an5wsqmuued7z/avtar.PNG?raw=1' className='w-12 h-10 rounded-full'/>
      <div className='flex flex-col'>
       <h3 className='font-bold text-xs'>Bharat</h3>
       <p className='text-xs text-t2'><span>Student </span> | Lyalpur college of Technology</p>

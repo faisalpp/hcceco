@@ -1,20 +1,20 @@
 import React, { useContext } from 'react'
 import Desclaimer from '../../components/Desclaimer'
 import { AppContext } from '../../context/GlobalContext'
-import LoginRegisterLayout from '../LoginRegisterLayout'
+import HeadMeta from '../HeadMeta'
 
 const Login = () => {
   const state = useContext(AppContext)
   return (
     <>
-   <LoginRegisterLayout>
+    <HeadMeta/>
     <Desclaimer>
      <div id="wrapper" className="hidden lg:grid grid-cols-12 w-full h-full">
       <div className='col-start-1 col-end-8 bg-white flex h-screen'> 
        <div className='flex flex-col space-y-5 w-full mt-20 items-center'>
         <h3 className='text-6xl'>LOGO</h3>
         <h3>Sign in to your account</h3>
-          <img src="/Group.png"/>
+          <img src="https://www.dropbox.com/s/frgr0uyp457kctp/Group.png?raw=1"/>
        </div>  
       </div>
       
@@ -45,7 +45,7 @@ const Login = () => {
      
      <div className='flex flex-col items-center text-white bg-t1 h-2/4 justify-center'>
        <div className='flex flex-col items-center mb-5'><h3 className='text-3xl'>LOGO</h3><h3 className='text-sm'>Sign in to your account</h3></div>
-       <div><img src="/Group.png" className='w-32 h-22'/></div>
+       <div><img src="https://www.dropbox.com/s/frgr0uyp457kctp/Group.png?raw=1" className='w-32 h-22'/></div>
      </div>
 
      {/* Form Wrapper */}
@@ -71,11 +71,8 @@ const Login = () => {
        <a onClick={()=>state.setDsclSatate(true)} className='self-center bg-t1 w-fit h-fit text-white text-xl px-10 py-2 rounded-lg'>Login</a>
       <div className='flex w-full text-center text-t2 text-sm'><a href="#">Dont have an account?<span className='text-t1 underline ml-1'>Create Account</span></a></div>
      </form>
-     
      </div>
-     
      </div>
-     </LoginRegisterLayout>
     </>
   )
 }

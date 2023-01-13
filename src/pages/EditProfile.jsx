@@ -33,11 +33,11 @@ const EditProfile = () => {
       <h3 className='text-t1 text-3xl text-center'>Edit Profile</h3>
       {/* Profile Image */}
       <div className='relative mt-5 w-full h-fit justify-center'>
-       <img src="/public/profile.png" className='w-full h-full rounded-md'/>
+       <img src="https://www.dropbox.com/s/knxzop1bk5103py/profile.png?raw=1" className='w-full h-full rounded-md'/>
        <button className='absolute top-56 right-5 bg-white rounded-full px-2 py-2'><RiPencilFill className='text-t1'/></button>
        <div className='absolute top-56 left-12 border-4 border-whites rounded-full bg-white'>
          <div className='relative w-fit h-fit'>
-          <img src='/public/avtar.png' className='w-20 h-20 rounded-full'/>
+          <img src='https://www.dropbox.com/s/h4an5wsqmuued7z/avtar.PNG?raw=1' className='w-20 h-20 rounded-full'/>
           <button className='absolute top-12 shadow-md left-14 bg-white rounded-full px-2 py-2'><RiPencilFill className='text-t1'/></button>
          </div>
        </div>

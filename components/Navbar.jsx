@@ -34,7 +34,7 @@ const Navbar = () => {
        {/* IF false then show login btn else show logged in user image */}
       {state.isLogin ? <button className='hover:bg-b2 text-sm bg-b1 rounded-md px-5 text-white'><NavLink to="/login">Login</NavLink></button>
       :
-      <div className='flex items-center space-x-1'><img src="/avtar.png" className='rounded-full w-9 h-9'/><div onClick={()=> setUserMenu(true)} className='flex text-sm items-center text-t1 cursor-pointer'><h3>Argha Paul</h3><RiArrowDropDownLine className='text-2xl'/></div></div>
+      <div className='flex items-center space-x-1'><img src="https://www.dropbox.com/s/h4an5wsqmuued7z/avtar.PNG?raw=1" className='rounded-full w-9 h-9'/><div onClick={()=> setUserMenu(true)} className='flex text-sm items-center text-t1 cursor-pointer'><h3>Argha Paul</h3><RiArrowDropDownLine className='text-2xl'/></div></div>
       }
       <div onMouseLeave={()=>setUserMenu(false)} className={`${userMenu ? 'absolute' : 'hidden'} w-fit h-fit top-24 right-10 bg-white border-2 border-t2/30 text-xs px-5 py-2`}><div className='flex flex-col items-center space-y-2 [&>a:hover]:text-t1 [&>a:hover]:cursor-pointer'><NavLink to="/edit-profile">Edite Profile</NavLink><a>Logout</a></div></div>
     

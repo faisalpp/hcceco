@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react'
 import Navbar from '../../components/Navbar'
 import { Helmet } from 'react-helmet-async'
 import { RiQuestionFill } from 'react-icons/ri'
+import HeadMeta from '../HeadMeta'
 
 const WriteReview = () => {
   
@@ -35,13 +36,7 @@ const WriteReview = () => {
 
   return (
     <>
-    <Helmet>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <link rel="preconnect" href="https://fonts.googleapis.com"/>
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
-     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"></link>
-     <title>Edit Profile</title>
-    </Helmet>
+    <HeadMeta title="Write a Review"/> 
     <Navbar/>
     <h3 className='text-center text-t1 text-2xl bg-white py-10'>How was your experience?</h3>
     <form className='flex flex-col space-y-10 bg-white w-full h-auto px-60'>

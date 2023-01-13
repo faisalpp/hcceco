@@ -1,5 +1,5 @@
 import React from 'react'
-import LayoutColleges from '../LayoutColleges'
+import LayoutColleges from './Layouts/LayoutColleges'
 import SearchFilter from '../../components/CollegesComponents/SerchFilter'
 import SortBy from '../../components/CollegesComponents/SortBy'
 import CollegeInfoCard from '../../components/CollegesComponents/CollegeInfoCard'
@@ -15,11 +15,11 @@ const CollegesHome = () => {
       <SortBy/>
     </div>
     <div className='grid grid-cols-3 mt-12'>
-      <CollegeInfoCard/>
-      <CollegeInfoCard/>
-      <CollegeInfoCard/>
-      <CollegeInfoCard/>
-      <CollegeInfoCard/>
+      <a href="http://localhost:5173/college/about"><CollegeInfoCard/></a>
+      <a href="http://localhost:5173/college/about"><CollegeInfoCard/></a>
+      <a href="http://localhost:5173/college/about"><CollegeInfoCard/></a>
+      <a href="http://localhost:5173/college/about"><CollegeInfoCard/></a>
+      <a href="http://localhost:5173/college/about"><CollegeInfoCard/></a>
     </div>
    </div>
   </LayoutColleges>
