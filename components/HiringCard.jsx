@@ -54,7 +54,7 @@ const HiringCard = () => {
    
    </div>
    {/* All Replys Wrapper  Hidden to be Flex*/}
-   <div className='hidden flex-col h-fit overflow-scroll overflow-x-hidden mb-5'>
+   <div className='flex flex-col h-fit overflow-scroll overflow-x-hidden mb-5'>
     <HomeCardReplay/>
     <HomeCardReplay/>
     <HomeCardReplay/>

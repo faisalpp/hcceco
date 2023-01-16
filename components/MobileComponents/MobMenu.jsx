@@ -11,8 +11,8 @@ const MobMenu = () => {
   const [corpMenu,setCorpMenu] = useState(false)
 
   return (
-  <div className={`${state.userMobMenu ? 'fixed':'hidden'} lg:hidden right-0 bg-white w-fit h-auto py-5`}>
-   <div className='flex flex-col space-y-px mt-2'>
+  <div className={`${state.userMobMenu ? 'fixed':'hidden'} lg:hidden right-0 bg-white w-fit h-full py-5 z-20`}>
+   <div className='flex flex-col space-y-2 mt-2'>
     <div className='flex items-center space-x-2 ml-5'><RiLogoutCircleRLine/><h3 className='text-lg'>Login</h3></div>
   
     {/* Home Menu */}

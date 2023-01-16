@@ -8,28 +8,22 @@ import QuickLinks from '../../../components/LeftSideMenus/QuickLinks'
 import HccecoLinks from '../../../components/RightSideMenu/HccecoLinks'
 import NotificationMenu from '../../../components/NotificationMenu'
 import SearchBar from '../../../components/HomeComponents/SearchBar'
-import { Helmet } from 'react-helmet-async'
+import HeadMeta from '../../HeadMeta'
 
 const Layout = ({children}) => {
   return (
     <>
-    <Helmet>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <link rel="preconnect" href="https://fonts.googleapis.com"/>
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
-     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"></link>
-     <title>Home</title>
-    </Helmet>
+     <HeadMeta title="Home"/>
     <Navbar/>
-     <main className='hidden lg:grid lg:grid-cols-12 mt-2'>
      <NotificationMenu/>
      <SearchBar/>
-     <div className='col-start-1 col-end-4 flex flex-col w-full items-center bg-green-5000 py-10 space-y-5'>
+     <main className='grid lg:grid-cols-12 grid-flow-row-dense mt-2'>
+     <div className='col-start-1 col-end-4 flex flex-col w-full items-center py-10 space-y-5'>
         <StudyGoals/>
         <LearningLinks/>
         <QuickLinks/>
      </div>
-     <div className='col-start-4 col-end-10 h-auto mb-10 w-full bg-white'>{children}</div>    
+     <div className='lg:col-start-4 lg:col-end-10 h-auto mb-10 bg-white lg:w-full w-screen'>{children}</div>    
      <div className='col-start-11 col-end-12 flex flex-col w-full items-center bg-green-5000 py-10 space-y-5'>
         <LatestAnnouncement/>
         <LatestHiring/>

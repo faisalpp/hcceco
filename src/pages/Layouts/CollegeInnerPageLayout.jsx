@@ -17,7 +17,7 @@ const CollegeInnerPageLayout = ({children}) => {
      <title>College Inner Page</title>
     </Helmet>
     <Navbar/>
-    <div className='w-full px-20 bg-t3/2 h-screen'>
+    <div className='w-full px-20 bg-white h-screen'>
       {/* College Image Banner with Information And Logo */}
       <div className='flex w-full'>
        <img src="https://www.dropbox.com/s/kuxadvixibll95l/college.jpg?raw=1" className='w-full h-[237px]'/>

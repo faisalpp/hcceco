@@ -1,22 +1,20 @@
 import React,{useState} from 'react'
 import DropDown from '../DropDown';
+import {AiOutlineLink} from 'react-icons/ai'
 
 const QuickLinks = () => {
-  const [quickLm1, setQuickLm1] = useState(true)
-  const [quickLm2, setQuickLm2] = useState(true)
-  const [quickLm3, setQuickLm3] = useState(true)
-  const [quickLm4, setQuickLm4] = useState(true)
-  const [quickLm5, setQuickLm5] = useState(true)
-  const [quickLm6, setQuickLm6] = useState(true)
+
   return (
-    <div className='w-64 h-auto bg-white'>
-     <div className='w-full text-center text-sm text-white py-3 bg-b1 rounded-t-md'>QUICK LINKS</div>
-     <DropDown degree="B.Tech" setState={setQuickLm1} state={quickLm1}/>
-     <DropDown degree="MBBS" setState={setQuickLm2} state={quickLm2}/>
-     <DropDown degree="MBA" setState={setQuickLm3} state={quickLm3}/>
-     <DropDown degree="DESIGN" setState={setQuickLm4} state={quickLm4}/>
-     <DropDown degree="LAW" setState={setQuickLm5} state={quickLm5}/>
-     <DropDown degree="SCIENCE" setState={setQuickLm6} state={quickLm6}/>
+    <div className='hidden lg:flex flex-col w-64 h-auto bg-white'>
+     <div className='flex items-center justify-center space-x-2 w-full text-center text-sm text-white py-3 bg-b1 rounded-t-md'><AiOutlineLink className='text-xl'/><span>QUICK LINKS</span></div>
+     <div className='mb-10'>
+     <DropDown degree="B.Tech"/>
+     <DropDown degree="MBBS" />
+     <DropDown degree="MBA" />
+     <DropDown degree="DESIGN" />
+     <DropDown degree="LAW" />
+     <DropDown degree="SCIENCE" />
+     </div>
 
     </div>
   )

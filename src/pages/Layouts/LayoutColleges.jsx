@@ -4,26 +4,25 @@ import Navbar from '../../../components/Navbar'
 import NotificationMenu from '../../../components/NotificationMenu'
 import SearchBar from '../../../components/HomeComponents/SearchBar'
 import ShareCollege from '../../../components/CollegesComponents/ShareCollege'
-import { Helmet } from 'react-helmet-async'
+import HeadMeta from '../../HeadMeta'
 
 const LayoutColleges = ({children}) => {
   return (
     <>
-    <Helmet>
-     <meta charSet="UTF-8" />
-     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <link rel="preconnect" href="https://fonts.googleapis.com"/>
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
-     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"></link>
-     <title>Document</title>
-    </Helmet>
+    {/* Helmet to insert title in head tag */}
+    <HeadMeta title="Colleges"/>
+    {/* Share College Popup */}
     <ShareCollege/>
+    {/* Main Navbar */}
      <Navbar/>
+     {/* Main Notification Menu */}
      <NotificationMenu/>
+     
+     {/* Main Search Bar */}
         <SearchBar/>
+
      <div className='grid grid-cols-12 w-full'>
-      <div className='col-start-1 col-end-4 w-full'><CollegesSideBar/></div>
+      <div className='col-start-1 col-end-4 w-full'><CollegesSideBar /></div>
       <main className='col-start-4 col-end-13 w-full'>{children}</main>
      </div>
     </>
