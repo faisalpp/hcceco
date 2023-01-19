@@ -1,12 +1,12 @@
 import React from 'react'
 import { BsDot } from 'react-icons/bs'
 import {NavLink} from 'react-router-dom'
-import {RiAccountPinCircleLine} from 'react-icons/ri'
+import {HiSpeakerphone} from 'react-icons/hi'
 
 const LatestAnnouncement = () => {
   return (
     <div id="wrapper" className='hidden lg:flex flex-col w-64 h-auto bg-white '>
-    <div id="heading" className='flex items-center justify-center space-x-2 w-full text-center text-sm text-white py-3 bg-b1 rounded-t-md'><RiAccountPinCircleLine className='text-xl'/><span>LATEST ANNOUNCEMENT</span></div>   
+    <div id="heading" className='flex items-center justify-center space-x-2 w-full text-center text-sm text-white py-3 bg-b1 rounded-t-md'><HiSpeakerphone className='text-xl'/><span>LATEST ANNOUNCEMENT</span></div>   
     {/* Announcement Link Card right Side home layout */}
     <div id="link-card" className='flex flex-col w-full mt-2 space-y-5 mb-5 '>
      

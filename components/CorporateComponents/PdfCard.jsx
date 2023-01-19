@@ -3,7 +3,7 @@ import { FaThumbsUp ,FaEye,FaDownload} from 'react-icons/fa'
 
 const PdfCard = ({topic,likes,views,downloads,likeUrl,downloadUrl}) => {
   return (
-    <div className='flex items-center space-x-72 px-10 py-5 border-2 border-t3'>
+    <div className='flex lg:flex-row flex-col space-y-5 items-center lg:space-x-72 lg:px-10 py-5 border-2 border-t3/30 rounded-md'>
     <div className='flex flex-col'>
      <h3 className='text-t1 font-bold text-[15px]'>{topic}</h3>
      <div className='flex text-xs text-t3/50 mt-2 space-x-5'>

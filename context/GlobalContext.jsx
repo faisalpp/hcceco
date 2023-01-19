@@ -13,9 +13,15 @@ const AppProvider = ({children}) => {
     const [share,setShare] = useState(false)
 
     // Mobile States
+    // Mobile Navbar Menu Trigger
     const [userMobMenu,setUserMobMenu] = useState(false)
+    // Colleges Filter Menu
+    const [clgFilter,setClgFilter] = useState(false); 
+    // Exam Filter
+    const [exmFilter,setExmFilter] = useState(false);
 
-    return <AppContext.Provider value={{share,setShare,userMobMenu,setUserMobMenu,chtState,setChtState,msgState,setMsgState,isLogin,setIsLogin,ntfState,setNtfState,dsclState,setDsclState,homeSearch,setHomeSearch,ntfMsg,setNtfMsg}}>{children}</AppContext.Provider>
+
+    return <AppContext.Provider value={{exmFilter,setExmFilter,clgFilter,setClgFilter,share,setShare,userMobMenu,setUserMobMenu,chtState,setChtState,msgState,setMsgState,isLogin,setIsLogin,ntfState,setNtfState,dsclState,setDsclState,homeSearch,setHomeSearch,ntfMsg,setNtfMsg}}>{children}</AppContext.Provider>
 };
 
 export {AppContext,AppProvider}

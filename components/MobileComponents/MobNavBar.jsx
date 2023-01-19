@@ -7,7 +7,7 @@ const MobNavBar = () => {
   const state = useContext(AppContext)
   return (
     // Mobile NavBar Body
-    <div className='lg:hidden flex bg-t3/5 shadow-md py-5'>
+    <div className='lg:hidden flex w-full h-fit bg-b4 shadow-md py-5'>
       {/* Navbar Items Position */}
       <div className='grid grid-cols-14 items-center w-full'>
        {/* Navbar User Image Round */}

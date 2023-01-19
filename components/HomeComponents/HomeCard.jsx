@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import { RxDotsVertical } from 'react-icons/rx'
 import { RiChat3Line,RiSendPlane2Line, RiTimeFill } from 'react-icons/ri'
 import {TbSend} from 'react-icons/tb'
+import {MdOutlineWavingHand} from 'react-icons/md'
 import {ImPriceTag} from 'react-icons/im'
 import HomeCardReplay from './HomeCardReplay'
 
@@ -48,17 +49,17 @@ const HomeCard = () => {
    
    
 
-   <div className='lg:bg-b3/20 ml-2 lg:ml-10 lg:mr-10 lg:border-t-0 lg:border-b-0 border-t-2 border-b-2 border-t3/10 mr-2 text-sm lg:text-lg lg:rounded-sm px-5 py-3'><h3>Graphics Designer required!</h3></div>
-   <div className='ml-2 lg:ml-10 mr-3 lg:mr-10 px-5 py-3'><p className='text-xs w-full'>Det er et velkjent faktum at lesere distraheres av lesbart innhold på en side når man ser på dens layout. Poenget med å bruke...<span className='text-green-500'>Read More</span></p></div>
+   <div className='lg:bg-b3/20 ml-2 lg:ml-10 lg:mr-10 lg:border-t-0 lg:border-b-0 border-t-2 border-b-2 border-t3/10 mr-2 text-xs lg:text-xs font-medium lg:rounded-sm px-5 py-3'><h3>Graphics Designer required!</h3></div>
+   <div className=' ml-2 lg:ml-10 mr-3 lg:mr-10 px-5 py-3'><p className='text-[11px] w-full'>Det er et velkjent faktum at lesere distraheres av lesbart innhold på en side når man ser på dens layout. Poenget med å bruke...<span className='text-green-500'>Read More</span></p></div>
    
    {/* CARD STATES ICONS */}
    <div className='flex items-center space-x-40 ml-3 lg:ml-10 border-t-2 border-b-2 border-t2/20 lg:mb-10 mb-3 mr-3 lg:mr-10 py-3'>
     <div className='flex text-[16px] lg:text-lg space-x-10 px-5'>
-      <div className='flex items-center cursor-pointer'><RiChat3Line/><span className='hover:underline'>125</span></div>
-      <div className='flex items-center'><RiChat3Line/><span>125</span></div>
-      <div className='flex items-center lg:p-0 px-7'><TbSend/><span>125</span></div>
+      <div className='flex items-center cursor-pointer'><MdOutlineWavingHand className='hover:text-t1'/><span className='text-xs'>125</span></div>
+      <div className='flex items-center cursor-pointer'><RiChat3Line className='hover:text-t1'/><span className='text-xs'>125</span></div>
+      <div className='flex items-center lg:p-0 px-7 cursor-pointer'><TbSend className='hover:text-t1'/><span className='text-xs'>125</span></div>
     </div>
-    <div className='hidden lg:flex text-xs w-full'><a className='hover:underline cursor-pointer'>View Opinions</a></div>
+    <div className='hidden lg:flex text-[11px] w-full'><a className='hover:underline cursor-pointer text-t3'>View Opinions</a></div>
     
    </div>
    {/* All Replys Wrapper  Hidden to be Flex*/}

@@ -13,13 +13,17 @@ module.exports = withMT({
         'b1':'#463196',
         'b2':'#A66CFF',
         'b3':'#C8C1DF',
+        'b4':'#EEEEEE',
         't1':'#463196',
         't2':'#7A7880',
         't3':'#707070',
+        'prg1':'#F7684A',
+        'prg2':'#1BA643',
         }
     },
   },
   plugins: [
-    require('tailwind-scrollbar')
+    require('tailwind-scrollbar'),
+    require('@tailwindcss/forms'),
   ],
 });

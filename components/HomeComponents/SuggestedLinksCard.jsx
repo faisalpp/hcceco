@@ -4,7 +4,7 @@ import { RiCloseCircleLine } from 'react-icons/ri';
 
 const SuggestedLinksCard = () => {
   return (
-    <div id="carousal-card" className='flex flex-col space-x-2 shadow-xl min-w-[250px] w-[250px] h-32'>
+    <div id="carousal-card" className='flex flex-col space-x-2 shadow-lg w-[250px] h-32'>
     <span className='mt-2'><RiCloseCircleLine className='relative left-52 hover:text-t1 cursor-pointer'/></span>
     <div className='flex items-center space-x-3 ml-5'>
      <img src='https://www.dropbox.com/s/h4an5wsqmuued7z/avtar.PNG?raw=1' className='w-12 h-10 rounded-full'/>

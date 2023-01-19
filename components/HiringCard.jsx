@@ -3,12 +3,12 @@ import { RxDotsVertical } from 'react-icons/rx'
 import { RiChat3Line,RiSendPlane2Line } from 'react-icons/ri'
 import {TbSend} from 'react-icons/tb'
 import {ImPriceTag} from 'react-icons/im'
-import HomeCardReplay from './HomeCardReplay'
+import HomeCardReplay from './HomeComponents/HomeCardReplay'
 
 const HiringCard = () => {
   return (
   <div className='flex flex-col ml-10 mr-10 border-2 border-t2/20 rounded-md mb-10'>
-   <div className='flex space-x-96 items-center'>
+   <div className='flex space-x-96  items-center w-full'>
     <div className='flex items-center px-10 py-5'>
      <img src="https://www.dropbox.com/s/h4an5wsqmuued7z/avtar.PNG?raw=1" className='w-10 h-10 rounded-full'/>
      <div className='flex flex-col'>

@@ -1,5 +1,6 @@
 import React from 'react'
 import {RiChat1Line} from 'react-icons/ri'
+import {MdOutlineWavingHand} from 'react-icons/md'
 
 const HomeCardReplay = () => {
   return (
@@ -16,7 +17,7 @@ const HomeCardReplay = () => {
       </div>
       {/* Reply Icons */}
       <div className='flex space-x-5 lg:space-x-10 text-t3'>
-       <RiChat1Line className='text-xl cursor-pointer'/>
+       <MdOutlineWavingHand className='text-xl cursor-pointer'/>
        <RiChat1Line className='text-xl cursor-pointer'/>
       </div>
      </div>

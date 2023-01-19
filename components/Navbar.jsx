@@ -9,12 +9,9 @@ import { useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const title = useLocation();
-
-
   const state = useContext(AppContext)
   // Desktop States
   const [userMenu,setUserMenu] = useState(false)
-  
   
   return (
   <div className='relative w-full'>
@@ -23,16 +20,16 @@ const Navbar = () => {
     <NavLink to="/"><div className={`${title.pathname === '/' ? 'group border-b-4 border-b1':null} flex flex-col items-center text-3xl [&>h3]:text-sm hover:border-b-4 border-b1 cursor-pointer w-fit h-14 group`}><RiHome3Line className={`${title.pathname === '/'?'text-t1':null} group-hover:text-b1`}/><h3>Home</h3></div></NavLink>
     <NavLink to="/colleges"><div className={`${title.pathname.startsWith('/colleges') ? 'group border-b-4 border-b1':null} flex flex-col items-center text-3xl [&>h3]:text-sm hover:border-b-4 border-b1 cursor-pointer w-fit h-14 group`}><RiGovernmentLine className={`${title.pathname === '/colleges'?'text-t1':null} group-hover:text-b1`}/><h3>Colleges</h3></div></NavLink>
     <NavLink to="/courses"><div className={`${title.pathname.startsWith('/courses') ? 'group border-b-4 border-b1':null} flex flex-col items-center text-3xl [&>h3]:text-sm hover:border-b-4 border-b1 cursor-pointer w-fit h-14 group`}><RiFileList3Line className={`${title.pathname === '/courses'?'text-t1':null} group-hover:text-b1`}/><h3>Courses</h3></div></NavLink>
-    <NavLink to="/exams"><div className={`${title.pathname === '/exams' ? 'group border-b-4 border-b1':null} flex flex-col items-center text-3xl [&>h3]:text-sm hover:border-b-4 border-b1 cursor-pointer w-fit h-14 group`}><RiArticleLine className={`${title.pathname === '/exam'?'text-t1':null} group-hover:text-b1`}/><h3>Exams</h3></div></NavLink>
-    <NavLink to="/corporate"><div className={`${title.pathname === '/corporate' ? 'group border-b-4 border-b1':null} flex flex-col items-center text-3xl [&>h3]:text-sm hover:border-b-4 border-b1 cursor-pointer w-fit h-14 group`}><RiGroup2Line className={`${title.pathname === '/corporate'?'text-t1':null} group-hover:text-b1`}/><h3>Corporate</h3></div></NavLink>
+    <NavLink to="/exams"><div className={`${title.pathname.startsWith('/exams') ? 'group border-b-4 border-b1':null} flex flex-col items-center text-3xl [&>h3]:text-sm hover:border-b-4 border-b1 cursor-pointer w-fit h-14 group`}><RiArticleLine className={`${title.pathname === '/exam'?'text-t1':null} group-hover:text-b1`}/><h3>Exams</h3></div></NavLink>
+    <NavLink to="/corporate/short-tricks"><div className={`${title.pathname.startsWith('/corporate') ? 'group border-b-4 border-b1':null} flex flex-col items-center text-3xl [&>h3]:text-sm hover:border-b-4 border-b1 cursor-pointer w-fit h-14 group`}><RiGroup2Line className={`${title.pathname === '/corporate'?'text-t1':null} group-hover:text-b1`}/><h3>Corporate</h3></div></NavLink>
     </div>
       <div className='col-start-9 flex text-2xl space-x-6'>
       
-      {!state.homeSearch ? <button onClick={()=>state.setHomeSearch(true)}><RiSearch2Line/></button>:<button onClick={()=>state.setHomeSearch(false)} className=' h-10'><RiSearch2Line/></button>}
+      {!state.homeSearch ? <button className='border-b-4 border-white py-2' onClick={()=>state.setHomeSearch(true)}><RiSearch2Line/></button>:<button onClick={()=>state.setHomeSearch(false)} className='border-b-4 border-t1 py-2'><RiSearch2Line /></button>}
       
       {state.ntfState ? 
-      <button onClick={()=>state.setNtfState(false)} className='border-b-4 border-b1 h-10'>{state.ntfMsg ? <div><VscBell/><div className='absolute ml-4 animate-bounce delay-75 top-16 bg-t1 rounded-full w-2 h-2'></div></div>:<VscBell/>}</button>
-      :<button onClick={()=>state.setNtfState(true)} className='flex w-fit h-fit'>{state.ntfMsg ? <div><VscBell/><div className='absolute ml-4 animate-bounce delay-75 top-16 bg-t1 rounded-full w-2 h-2'></div></div>:<VscBell/>}</button>}
+      <button onClick={()=>state.setNtfState(false)} className='border-b-4 border-b1'>{state.ntfMsg ? <div><VscBell/><div className='absolute ml-4 top-[60px] bg-t1 rounded-full w-2 h-2'></div></div>:<VscBell/>}</button>
+      :<button onClick={()=>state.setNtfState(true)} className='border-b-4 border-white'>{state.ntfMsg ? <div><VscBell/><div className='absolute ml-4 top-[60px] bg-t1 rounded-full w-2 h-2'></div></div>:<VscBell/>}</button>}
      
       </div>
     <div className='col-start-11 col-end-16 flex space-x-5'>
