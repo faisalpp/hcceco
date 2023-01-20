@@ -10,21 +10,21 @@ const CollegeProfileS5 = () => {
   <HeadMeta title="Edite Profile"/>
     <Navbar/>
     <div className='flex flex-col py-7 bg-white items-center w-full h-screen'>
-     <div className='flex flex-col ml-3 mr-3 w-full px-20 h-fit justify-center'>
+     <div className='flex flex-col lg:ml-3 lg:mr-3 w-full lg:px-20 h-fit items-center justify-center'>
      <CollegeProfileNavbar/>
      <div className='grid grid-cols-12 items-center mt-10'>
-      <div className='col-start-1 col-end-3 flex flex-col mb-2'>
+      <div className='col-start-1 col-end-3 flex lg:flex-col flex-row mb-2'>
         <h3 className='text-t1 text-lg'>Show Entries</h3>
         <div className='flex items-center border-2 border-t3/40 rounded-md w-fit'><RiArrowDropUpFill className='text-3xl text-t1'/><input value="0" type="number" className='w-12 border-none'/><RiArrowDropDownFill className='text-3xl text-t1'/></div>
       </div>
-      <div className='col-start-11 flex'>
+      <div className='col-start-11 lg:flex hidden'>
         <input type="search" placeholder='Search here..'  className='w-60 border-2 border-t3/40 rounded-md h-fit'/>
       </div>
      </div>
      
        
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+<div class="relative overflow-x-auto lg:w-full w-80 shadow-md sm:rounded-lg">
+    <table class="lg:w-full w-60 text-sm text-left text-gray-500 dark:text-gray-400">
         <thead style={{'backgroundColor':'#A66CFF'}} class="text-xs text-black uppercase bg-gray-50 ">
             <tr>
                 <th scope="col" class="px-6 py-3">

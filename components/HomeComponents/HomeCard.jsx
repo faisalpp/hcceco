@@ -9,9 +9,10 @@ import HomeCardReplay from './HomeCardReplay'
 const HomeCard = () => {
   
   const [cardMenu, setCardMenu] = useState(false);
+  const [readMore,setReadMore] = useState(false);
   
   return (
-  <div  className='flex flex-col ml-5 mr-5 lg:ml-10 lg:mr-10 lg:border-2 lg:shadow-none shadow-2xl lg:border-t2/20 rounded-md mb-10'>
+  <div  className='flex flex-col ml-2 mr-2 lg:ml-10 lg:mr-10 lg:border-2 lg:shadow-none shadow-2xl lg:border-t2/20 rounded-md mb-10'>
    <div className='flex lg:space-x-20 items-center'>
     <div className='flex items-center px-5 lg:px-10 py-5'>
      <img src="https://www.dropbox.com/s/h4an5wsqmuued7z/avtar.PNG?raw=1" className='w-10 h-10 rounded-full'/>
@@ -50,7 +51,7 @@ const HomeCard = () => {
    
 
    <div className='lg:bg-b3/20 ml-2 lg:ml-10 lg:mr-10 lg:border-t-0 lg:border-b-0 border-t-2 border-b-2 border-t3/10 mr-2 text-xs lg:text-xs font-medium lg:rounded-sm px-5 py-3'><h3>Graphics Designer required!</h3></div>
-   <div className=' ml-2 lg:ml-10 mr-3 lg:mr-10 px-5 py-3'><p className='text-[11px] w-full'>Det er et velkjent faktum at lesere distraheres av lesbart innhold på en side når man ser på dens layout. Poenget med å bruke...<span className='text-green-500'>Read More</span></p></div>
+   <div className='ml-2 lg:ml-10 mr-3 lg:mr-10 px-5 py-3'><p className={`${readMore?'w-full':'w-full h-8 overflow-hidden'} text-[11px] w-full`}>Det er et velkjent faktum at lesere distraheres av lesbart innhold på en side når man ser på dens layout. Poenget med å bruke. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure architecto explicabo nemo dolores atque fugit autem sapiente? Corrupti quod consectetur, accusantium unde rem doloribus suscipit maiores, ex commodi porro non?</p>{readMore ?<span onClick={()=>setReadMore(false)} className='text-green-500 text-[10px] hover:underline cursor-pointer'>Read More</span> :<span onClick={()=>setReadMore(true)} className='text-green-500 text-[10px] hover:underline cursor-pointer'>Read More</span>}</div>
    
    {/* CARD STATES ICONS */}
    <div className='flex items-center space-x-40 ml-3 lg:ml-10 border-t-2 border-b-2 border-t2/20 lg:mb-10 mb-3 mr-3 lg:mr-10 py-3'>
@@ -73,9 +74,9 @@ const HomeCard = () => {
    </div>
    
    <div className='flex lg:hidden mb-2 text-xs w-full text-t3/50 ml-5'><a className='hover:underline cursor-pointer'>View All Opinions &#40;155&#41;</a></div>
-   <div className='flex space-x-3 lg:space-x-5 items-center ml-2 mr-2 lg:px-5 lg:py-2 px-2 py-2 lg:ml-10 rounded-md lg:mr-10 mb-10 bg-t3/5 lg:w-3/2'>
+   <div className='flex lg:space-x-5 items-center ml-2 mr-2 lg:px-5 lg:py-2 px-2 py-2 lg:ml-10 rounded-md lg:mr-10 mb-10 bg-t3/5 lg:w-3/2'>
     <div><img src="https://www.dropbox.com/s/h4an5wsqmuued7z/avtar.PNG?raw=1" className='w-10 h-10 rounded-full'/></div>
-    <div><input type="text" placeholder="Write an opinion.." className='bg-b3/5 text-xs w-40 lg:w-72 outline-none text-t2'/></div>
+    <div><input type="text" placeholder="Write an opinion.." className='bg-b3/5 text-xs w-40 lg:w-72 outline-none focus:ring-0 border-none text-t2'/></div>
     <div><RiSendPlane2Line className='ml-7 text-xl cursor-pointer'/></div>
    </div>
   </div>

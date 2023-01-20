@@ -14,8 +14,9 @@ const Navbar = () => {
   const [userMenu,setUserMenu] = useState(false)
   
   return (
-  <div className='relative w-full'>
-  <div className='hidden lg:grid lg:grid-cols-16 shadow-md pt-10 items-center bg-white'>
+  <>
+  <div className='relative'>
+  <div className='hidden lg:grid grid-cols-16 shadow-md pt-10 items-center bg-white'>
     <div className='col-start-7 flex items-center space-x-20 mb-2'>
     <NavLink to="/"><div className={`${title.pathname === '/' ? 'group border-b-4 border-b1':null} flex flex-col items-center text-3xl [&>h3]:text-sm hover:border-b-4 border-b1 cursor-pointer w-fit h-14 group`}><RiHome3Line className={`${title.pathname === '/'?'text-t1':null} group-hover:text-b1`}/><h3>Home</h3></div></NavLink>
     <NavLink to="/colleges"><div className={`${title.pathname.startsWith('/colleges') ? 'group border-b-4 border-b1':null} flex flex-col items-center text-3xl [&>h3]:text-sm hover:border-b-4 border-b1 cursor-pointer w-fit h-14 group`}><RiGovernmentLine className={`${title.pathname === '/colleges'?'text-t1':null} group-hover:text-b1`}/><h3>Colleges</h3></div></NavLink>
@@ -45,13 +46,10 @@ const Navbar = () => {
     </div>
   </div>
 
+  </div>
   {/* Mobile Navbar */}
   <MobNavBar/>
-   
-   {/* Mobile Menue */}
-   <MobMenu/>
-  
-  </div>
+  </>
   )
 }
 

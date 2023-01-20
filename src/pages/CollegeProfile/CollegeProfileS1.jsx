@@ -3,6 +3,7 @@ import Navbar from '../../../components/Navbar'
 import { RiPencilFill } from 'react-icons/ri';
 import HeadMeta from '../../HeadMeta';
 import CollegeProfileNavbar from '../../../components/CollegesComponents/CollegeProfileNavbar'
+import { Input } from '@material-tailwind/react';
 
 const CollegeProfileS1 = () => {
 
@@ -37,17 +38,17 @@ const CollegeProfileS1 = () => {
       <form className='flex flex-col space-y-10 mb-20 w-full h-full mt-20 items-center'>
        {/* Form Input Group */}
        <div className='flex lg:flex-row space-y-10 lg:space-y-0 flex-col w-full lg:space-x-10 items-center'>
-        <div className='lg:w-1/2'><h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Designation</h3><input placeholder='Designation' value={designation} onChange={e=>setDesignation(e.target.value)} name="designation" type="text" className='form-input border-2 border-t3/30 w-full lg:h-14 rounded-md px-5'/></div>
-        <div className='lg:w-1/2'><h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Email</h3><input placeholder='Email' value={email} onChange={e=>setEmail(e.target.value)} name="designation" type="text" className='lg:h-14 w-full rounded-md border-2 border-t3/30 px-5'/></div>
+        <div className='lg:w-1/2 w-80'><h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Designation</h3><Input label='Designation' placeholder='Designation' value={designation} onChange={e=>setDesignation(e.target.value)} name="designation" type="text" className='focus:ring-0 border-2 border-t3/30 w-full lg:h-14 rounded-md px-5'/></div>
+        <div className='lg:w-1/2 w-80'><h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Email</h3><Input label='Email' placeholder='Email' value={email} onChange={e=>setEmail(e.target.value)} name="designation" type="text" className='lg:h-14 w-full focus:ring-0 rounded-md border-2 border-t3/30 px-5'/></div>
        </div>  
        {/* Form Input Group */}
        <div className='flex lg:flex-row space-y-10 lg:space-y-0 flex-col w-full lg:space-x-10 items-center'>
-        <div className='lg:w-1/2'><h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Password</h3><input placeholder='Password' value={password} onChange={e=>setPassword(e.target.value)} name="password" type="text" className='form-input border-2 border-t3/30 w-full lg:h-14 rounded-md px-5'/></div>
-        <div className='lg:w-1/2'><h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Mobile Number</h3><input placeholder='012344567' value={mobileNo} onChange={e=>setMobileNo(e.target.value)} name="mobileNo" type="text" className='lg:h-14 w-full rounded-md border-2 border-t3/30 px-5'/></div>
+        <div className='lg:w-1/2 w-80'><h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Password</h3><Input label='Paswword' placeholder='Password' value={password} onChange={e=>setPassword(e.target.value)} name="password" type="text" className='focus:ring-0 border-2 border-t3/30 w-full lg:h-14 rounded-md px-5'/></div>
+        <div className='lg:w-1/2 w-80'><h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Mobile Number</h3><Input label='Mobile Number' placeholder='012344567' value={mobileNo} onChange={e=>setMobileNo(e.target.value)} name="mobileNo" type="text" className='focus:ring-0 lg:h-14 w-full rounded-md border-2 border-t3/30 px-5'/></div>
        </div>  
        {/* Form Input Group */}
        <div className='flex lg:flex-row space-y-10 lg:space-y-0 flex-col w-full lg:space-x-10 items-center'>
-        <div className='lg:w-1/2'><h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>College Website</h3><input placeholder='Enter College Website' value={clgWebsite} onChange={e=>setClgWebsite(e.target.value)} name="collegeWeb" type="text" className='form-input border-2 border-t3/30 w-full lg:h-14 rounded-md px-5'/></div>
+        <div className='lg:w-1/2 w-80'><h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>College Website</h3><Input label='College Website' placeholder='Enter College Website' value={clgWebsite} onChange={e=>setClgWebsite(e.target.value)} name="collegeWeb" type="text" className='focus:ring-0 border-2 border-t3/30 w-full lg:h-14 rounded-md px-5'/></div>
        </div>  
        {/* Form Buttons */}
        <div className='flex w-full h-fit justify-center space-x-5 lg:space-x-10 items-center'>

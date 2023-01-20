@@ -49,7 +49,7 @@ import SignupS2 from "./pages/SignupS2";
 import SignupCollege from "./pages/SignupCollege";
 import MockTestResult from "./pages/CorporateTest/MockTestResult";
 
-import ProfileSearch from './pages/SearchPages/Profile';
+import ProfileAll from './pages/SearchPages/ProfileAll';
 import PostsSearch from './pages/SearchPages/Posts';
 import HiringSearch from './pages/SearchPages/Hiring';
 import AnnouncementsSearch from './pages/SearchPages/Announcements';
@@ -67,6 +67,9 @@ import CollegeProfileS2 from './pages/CollegeProfile/CollegeProfileS2';
 import CollegeProfileS3 from './pages/CollegeProfile/CollegeProfileS3';
 import CollegeProfileS4 from './pages/CollegeProfile/CollegeProfileS4';
 import CollegeProfileS5 from './pages/CollegeProfile/CollegeProfileS5';
+import ProfilePeople from "./pages/SearchPages/ProfilePeople";
+import ProfileCollege from "./pages/SearchPages/ProfileCollege";
+import PeoplePosts from "./pages/PeoplePosts";
 
 function App() {
   return (  
@@ -82,6 +85,8 @@ function App() {
       <Route path="/signup/step1" element={<SignupS1/>}/>
       {/* Signup OTP Page */}
       <Route path="/signup/step2" element={<SignupS2/>}/>
+      {/* Edite Profile Person */}
+      <Route path="/edite-profile" element={<EditProfile/>}/>
       {/* Signup College Page */}
       <Route path="/signup/college/step1" element={<SignupCollege/>}/>
       {/* Signup Collge OTP Page */}
@@ -154,12 +159,18 @@ function App() {
        <Route path="/desclaimer" element={<Desclaimer/>}/>
        
        {/* Search Pages with sidebar */}
-        {/* Profile Search Page */}
-         <Route path="/search/profile" element={<ProfileSearch/>}/>
+
+        {/* Profile All Search Page */}
+         <Route path="/search/profiles/all" element={<ProfileAll/>}/>
+        {/* Profile People Search Page */}
+         <Route path="/search/profiles/people" element={<ProfilePeople/>}/>
+        {/* Profile College Search Page */}
+         <Route path="/search/profiles/college" element={<ProfileCollege/>}/>
+         
          {/* Posts Search Page */}
          <Route path="/search/posts" element={<PostsSearch/>}/>
          {/* Hiring Search Page */}
-         <Route path="/search/hiring" element={<HiringSearch/>}/>
+         <Route path="/search/hirings" element={<HiringSearch/>}/>
          {/* Announcements Search Page */}
          <Route path="/search/announcements" element={<AnnouncementsSearch/>}/>
          {/* Questions Search Page */}
@@ -195,6 +206,9 @@ function App() {
         <Route path="/college/faq" element={<Faq/>}/>                
         {/* Distance Education Page */}
         <Route path="/college/distance-education" element={<DistanceEducation/>}/>
+
+        {/* Individual People Post */}
+        <Route path="/jhon/posts" element={<PeoplePosts/>}/>
 
      </Routes>
   )

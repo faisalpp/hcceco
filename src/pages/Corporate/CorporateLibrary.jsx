@@ -30,9 +30,9 @@ const CorporateLibrary = () => {
        <div className='w-full bg-white h-auto'>
        <div className='flex flex-col lg:px-10 px-3'>
         {/* Desktop Heading */}
-        <h3 className='lg:flex hidden mt-20 text-sm font-semibold text-t1' >SHORT TRICKS / <span className='text-t3/40'>Reasoning Short Tricks</span></h3>
+        <h3 className='lg:flex hidden mt-20 text-sm font-semibold text-t1' >Library / <span className='text-t3/40'>Short Tricks</span></h3>
         {/* Mobile Heading */}
-        <div className='flex justify-center'><h3 className='lg:hidden flex mt-20 text-lg text-center font-semibold text-t1' >Corport-Short tricks</h3></div>
+        <div className='flex justify-center'><h3 className='lg:hidden flex mt-20 text-lg text-center font-semibold text-t1' >Corporate Library</h3></div>
         
                  {/* Mobile Filter */}
         <div className='lg:hidden flex space-x-3 mt-5'>
