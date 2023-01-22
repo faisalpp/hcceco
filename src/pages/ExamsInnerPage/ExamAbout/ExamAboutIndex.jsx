@@ -10,18 +10,16 @@ import ImportantExamBook from './ImportanExamBook'
 import ExamHelp from './ExamHelp'
 import ExamPrevYearCutoff from './ExamPrevYearCutoff'
 import PrevYearsPapers from './PrevYearsPapers'
-import { NavLink, useLocation } from 'react-router-dom'
 import ExamInnerNavbar from '../../../../components/ExamComponents/ExamInnerNavbar'
 
 const ExamAboutIndex = () => {
   const [tabIndex,setTabIndex] = useState(0)
-  const title = useLocation()
   return (
     <>
     <Navbar/>
     <ExamInnerNavbar/>
      <Tabs tabIndex={tabIndex} onSelect={(index)=>setTabIndex(index)}>
-    <div className='grid lg:grid-cols-12 grid-flow-row-dense w-full'>
+    <div className='lg:grid lg:grid-cols-12 grid-flow-row-dense w-full'>
       <div className='lg:col-start-1 lg:col-end-4 flex lg:flex-col flex-row items-center'>   
         {/* COurses inner menu */}
         <TabList className='flex lg:flex-col flex-row lg:space-x-0 space-x-2 lg:py-5 bg-white lg:h-auto h-fit lg:w-72 w-[360px] lg:mb-10 lg:rounded-md lg:mt-7 lg:ml-7 lg:overflow-auto overflow-scroll py-2'>

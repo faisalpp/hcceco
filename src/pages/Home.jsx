@@ -3,7 +3,6 @@ import CommentBox from '../../components/HomeComponents/CommentBox';
 import HomeCard from '../../components/HomeComponents/HomeCard';
 import PostEvent from '../../components/HomeComponents/PostEvent';
 import SuggestedLinks from '../../components/HomeComponents/SuggestedLinks';
-import NotificationMenu from '../../components/NotificationMenu';
 import SearchBar from '../../components/SearchBar';
 import Layout from './Layouts/Layout';
 import {useTitle} from '../../customeHooks/useTitle'

@@ -22,7 +22,7 @@ const ExamFaq = () => {
       <main className='lg:col-start-4 lg:col-end-13 w-full h-screen'>
       <div className='col-start-4 col-end-13 bg-white h-screen'>
        {/* FAQ Question */}
-       <div className='flex flex-col ml-20 py-10 mr-20'>
+       <div className='flex flex-col lg:ml-20 ml-5 py-10 lg:mr-20 mr-5'>
         <h3 className='text-xl text-t1'>FAQ</h3>
          <FaqQuestionAnswer question="What is Eligibility Criteria for ScholerShip" answer="       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum debitis eligendi explicabo voluptas repudiandae quasi obcaecati autem. Mollitia, molestiae porro fugit, explicabo ad deserunt, sint hic libero fugiat incidunt aspernatur."/>
          <FaqQuestionAnswer question="What is Eligibility Criteria for ScholerShip" answer="       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum debitis eligendi explicabo voluptas repudiandae quasi obcaecati autem. Mollitia, molestiae porro fugit, explicabo ad deserunt, sint hic libero fugiat incidunt aspernatur."/>

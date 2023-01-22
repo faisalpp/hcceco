@@ -30,8 +30,8 @@ const SearchSideBar = () => {
       <div className='flex items-center space-x-2 cursor-pointer px-5 py-2 hover:bg-t1/40 hover:text-t1 w-full group'><RiClipboardFill className={`${title.pathname === "/search/exams"?'text-t1':'text-t3/40'} group-hover:text-t1 text-sm`}/><h3>Exams</h3></div>
      </div></NavLink>
      {/* Corporate Tab Link */}
-     <NavLink to="/search/corporate"><div className={`${title.pathname === "/search/corporate" ? 'border-l-4 bg-t1/40 border-t1 [&>*]:text-t1':null} border-l-4 border-white hover:border-t1 w-full`}>
-      <div className='flex items-center space-x-2 cursor-pointer px-5 py-2 hover:bg-t1/40 hover:text-t1 w-full group'><RiGroup2Fill className={`${title.pathname === "/search/corporate"?'text-t1':'text-t3/40'} group-hover:text-t1 text-sm`}/><h3>Corporate</h3></div>
+     <NavLink to="/search/corporate/short-tricks"><div className={`${title.pathname.startsWith("/search/corporate") ? 'border-l-4 bg-t1/40 border-t1 [&>*]:text-t1':null} border-l-4 border-white hover:border-t1 w-full`}>
+      <div className='flex items-center space-x-2 cursor-pointer px-5 py-2 hover:bg-t1/40 hover:text-t1 w-full group'><RiGroup2Fill className={`${title.pathname.startsWith("/search/corporate")?'text-t1':'text-t3/40'} group-hover:text-t1 text-sm`}/><h3>Corporate</h3></div>
      </div></NavLink>
 
     </div>

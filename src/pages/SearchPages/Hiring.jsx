@@ -1,16 +1,33 @@
 import React from 'react'
-import SearchLayout from '../Layouts/SearchLayout'
-import HiringCard from '../../../components/HiringCard'
+import SearchSideBar from '../../../components/SearchSideBar'
+import Navbar from '../../../components/Navbar'
+import SearchNavigation from '../../../components/MobileComponents/SearchNavigation'
+
+import HomeCard from '../../../components/HomeComponents/HomeCard'
 
 const Hiring = () => {
+
   return (
-    <SearchLayout>
-    <div className='flex flex-col space-y-16 ml-5 mr-5 bg-white py-10'>
-     <h3 className='text-center text-t1 text-3xl font-bold mt-10'>Hiring</h3>
-     <HiringCard/>
-     <HiringCard/>
-    </div>
-    </SearchLayout>
+    <>
+     <Navbar/>
+     <div className='lg:grid lg:grid-cols-12 flex flex-col w-full h-auto'>
+      <div className='col-start-1 col-end-4 hidden lg:flex justify-center'>
+        <SearchSideBar/>
+      </div>
+      
+      <div className='col-start-4 col-end-13 bg-white w-full h-full'>
+       <div className='lg:flex hidden justify-center w-full mt-10 text-3xl text-t1'><h3>Hiring</h3></div>
+       <SearchNavigation/>
+       <h3 className='lg:hidden mt-5 px-5 text-xl text-t1 underline'>Hirings</h3>
+       <div className='flex flex-col lg:mt-20 mt-5'>
+        <HomeCard postType="Hiring"/>
+        <HomeCard postType="Hiring"/>
+        <HomeCard postType="Hiring"/>
+       </div>
+
+      </div>
+     </div>
+    </>
   )
 }
 

@@ -26,7 +26,7 @@ const Navbar = () => {
     </div>
       <div className='col-start-9 flex text-2xl space-x-6'>
       
-      {!state.homeSearch ? <button className='border-b-4 border-white py-2' onClick={()=>state.setHomeSearch(true)}><RiSearch2Line/></button>:<button onClick={()=>state.setHomeSearch(false)} className='border-b-4 border-t1 py-2'><RiSearch2Line /></button>}
+      {!state.homeSearch ? <button className={` ${title.pathname.startsWith("/search")?'border-b-4 border-t1':null} border-b-4 border-white py-2`} onClick={()=>state.setHomeSearch(true)}><RiSearch2Line/></button>:<button onClick={()=>state.setHomeSearch(false)} className={` ${title.pathname.startsWith("/search")?'border-b-4 border-t1':null} border-b-4 border-t1 py-2`}><RiSearch2Line /></button>}
       
       {state.ntfState ? 
       <button onClick={()=>state.setNtfState(false)} className='border-b-4 border-b1'>{state.ntfMsg ? <div><VscBell/><div className='absolute ml-4 top-[60px] bg-t1 rounded-full w-2 h-2'></div></div>:<VscBell/>}</button>
@@ -41,7 +41,7 @@ const Navbar = () => {
       :
       <button className='hover:bg-b2 text-sm bg-b1 rounded-md px-5 text-white'><NavLink to="/login">Login</NavLink></button>
       }
-      <div onMouseLeave={()=>setUserMenu(false)} className={`${userMenu ? 'absolute' : 'hidden'} w-fit h-fit top-24 right-10 bg-white border-2 border-t2/30 text-xs px-5 py-2`}><div className='flex flex-col items-center space-y-2 [&>a:hover]:text-t1 [&>a:hover]:cursor-pointer'><NavLink to="/edit-profile">Edite Profile</NavLink><button onClick={()=>state.setIsLogin(false)}>Logout</button></div></div>
+      <div onMouseLeave={()=>setUserMenu(false)} className={`${userMenu ? 'absolute' : 'hidden'} w-fit h-fit top-24 right-10 bg-white border-2 border-t2/30 text-xs px-5 py-2`}><div className='flex flex-col items-center space-y-2 [&>a:hover]:text-t1 [&>a:hover]:cursor-pointer'><NavLink to="/edite-profile">Edite Profile</NavLink><button onClick={()=>state.setIsLogin(false)}>Logout</button></div></div>
     
     </div>
   </div>

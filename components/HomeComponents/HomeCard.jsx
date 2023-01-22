@@ -6,7 +6,7 @@ import {MdOutlineWavingHand} from 'react-icons/md'
 import {ImPriceTag} from 'react-icons/im'
 import HomeCardReplay from './HomeCardReplay'
 
-const HomeCard = () => {
+const HomeCard = ({postType}) => {
   
   const [cardMenu, setCardMenu] = useState(false);
   const [readMore,setReadMore] = useState(false);
@@ -18,16 +18,16 @@ const HomeCard = () => {
      <img src="https://www.dropbox.com/s/h4an5wsqmuued7z/avtar.PNG?raw=1" className='w-10 h-10 rounded-full'/>
      <div className='flex flex-col'>
       <div className='flex items-center space-x-3 lg:space-x-5 ml-3'>
-        <h3 className='font-bold text-[10px] lg:text-xs'>Noor Fatima</h3><span className='lg:flex hidden text-t2 text-[10px]'>Created a Hiring Post</span><span className='lg:hidden text-orange-500 text-[10px]'>Hiring</span><span className='flex items-center text-t2 text-[10px]'><RiTimeFill/> 2 Hrs</span>
+        <h3 className='font-bold text-[10px] lg:text-xs'>Noor Fatima</h3><span className='lg:flex hidden text-t2 text-[10px]'>Created a {postType} Post</span><span className='lg:hidden text-orange-500 text-[10px]'>{postType}</span><span className='flex items-center text-t2 text-[10px]'><RiTimeFill/> 2 Hrs</span>
       </div>
       <div className='flex items-center space-x-5 ml-3 text-[9px] lg:text-[10px] text-t2'>
         <h3>Student | Lyalpur college of Technology</h3><div className="hidden lg:flex items-center space-x-1"><ImPriceTag/><h3> Monika & <span>4</span> Others</h3></div>
       </div>
      </div>
     </div>
-     <div className='block'>
+     <div className='absolute lg:right-20 right-5'>
      <RxDotsVertical onClick={()=>setCardMenu(true)} className='hover:text-t1 text-xl cursor-pointer'/>
-     <div onMouseLeave={()=>setCardMenu(false)} className={`${cardMenu ?'absolute' :'hidden'} lg:right-96 right-10 w-fit h-fit shadow-xl bg-white px-5 py-3`}><a className='cursor-pointer hover:underline text-xs'>Report</a></div> 
+     <div onMouseLeave={()=>setCardMenu(false)} className={`${cardMenu ?'absolute' :'hidden'} lg:right-0 right-0 w-fit h-fit shadow-xl bg-white px-5 py-3`}><a className='cursor-pointer hover:underline text-xs'>Report</a></div> 
      </div>  
    
    </div>
@@ -60,7 +60,7 @@ const HomeCard = () => {
       <div className='flex items-center cursor-pointer'><RiChat3Line className='hover:text-t1'/><span className='text-xs'>125</span></div>
       <div className='flex items-center lg:p-0 px-7 cursor-pointer'><TbSend className='hover:text-t1'/><span className='text-xs'>125</span></div>
     </div>
-    <div className='hidden lg:flex text-[11px] w-full'><a className='hover:underline cursor-pointer text-t3'>View Opinions</a></div>
+    <div className='hidden lg:flex justify-end text-[11px] w-full'><a className='hover:underline cursor-pointer text-t3'>View Opinions</a></div>
     
    </div>
    {/* All Replys Wrapper  Hidden to be Flex*/}
@@ -73,12 +73,18 @@ const HomeCard = () => {
     <HomeCardReplay/>
    </div>
    
-   <div className='flex lg:hidden mb-2 text-xs w-full text-t3/50 ml-5'><a className='hover:underline cursor-pointer'>View All Opinions &#40;155&#41;</a></div>
-   <div className='flex lg:space-x-5 items-center ml-2 mr-2 lg:px-5 lg:py-2 px-2 py-2 lg:ml-10 rounded-md lg:mr-10 mb-10 bg-t3/5 lg:w-3/2'>
-    <div><img src="https://www.dropbox.com/s/h4an5wsqmuued7z/avtar.PNG?raw=1" className='w-10 h-10 rounded-full'/></div>
-    <div><input type="text" placeholder="Write an opinion.." className='bg-b3/5 text-xs w-40 lg:w-72 outline-none focus:ring-0 border-none text-t2'/></div>
-    <div><RiSendPlane2Line className='ml-7 text-xl cursor-pointer'/></div>
+   <div className='flex lg:hidden mb-2 text-xs w-fit text-b4 ml-5'><a className='hover:underline cursor-pointer'>View All Opinions &#40;155&#41;</a></div>
+   <div className='flex items-center w-full lg:px-10 '>
+    <div className='flex lg:space-x-5 items-center ml-2  mr-2 lg:py-2 px-2 py-2 rounded-md mb-10 bg-t3/5 lg:w-full'>
+     <img src="https://www.dropbox.com/s/h4an5wsqmuued7z/avtar.PNG?raw=1" className='w-10 h-10 rounded-full'/>
+    <div className='flex w-full items-center '>
+     <input type="text" placeholder="Write an opinion.." className='bg-b4/5 text-xs lg:w-11/12 w-full outline-none focus:ring-0 border-none text-t2'/>
+     <div><RiSendPlane2Line className='text-xl cursor-pointer'/></div>
+    </div> 
+    
+    </div>
    </div>
+  
   </div>
   )
 }

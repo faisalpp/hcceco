@@ -1,38 +1,32 @@
 import React from 'react'
-import SearchBar from '../../../components/SearchBar'
-import SearchCard from '../../../components/SearchCard'
-import HeadMeta from '../../HeadMeta'
-import SearchLayout from '../Layouts/SearchLayout'
+import SearchSideBar from '../../../components/SearchSideBar'
+import Navbar from '../../../components/Navbar'
+import SearchNavigation from '../../../components/MobileComponents/SearchNavigation'
+
+import HomeCard from '../../../components/HomeComponents/HomeCard'
 
 const Services = () => {
+
   return (
     <>
-    <SearchLayout>
-
-    <HeadMeta title="Search Profile"/>
-     <div className='col-start-4 col-end-12'>
-    <div className='flex flex-col bg-white w-full h-screen items-center'>
-     {/* Heading Dynamic */}
-     <div className='mt-10'><h3 className='text-t1 text-center text-2xl font-bold'>PROFILES</h3></div>
-     {/* Wrapper Navigations plus search bar */}
-     <div className='flex w-full border-b-4 border-t3/10'>
-      {/* Navigation Tabs */}
-      <div className='flex space-x-10 mt-10 ml-10 w-full'>
-       <div className='text-t3/50 border-b-4 border-b1 py-3'><h3>All</h3></div>
-       <div className='text-t3/50 py-3'><h3>People</h3></div>
-       <div className='text-t3/50 py-3'><h3>College</h3></div>
+     <Navbar/>
+     <div className='lg:grid lg:grid-cols-12 flex flex-col w-full h-auto'>
+      <div className='col-start-1 col-end-4 hidden lg:flex justify-center'>
+        <SearchSideBar/>
       </div>
-      <div className='w-1/2 mr-10'><SearchBar/></div>
+      
+      <div className='col-start-4 col-end-13 bg-white w-full h-full'>
+       <div className='lg:flex hidden justify-center w-full mt-10 text-3xl text-t1'><h3>Services</h3></div>
+       <SearchNavigation/>
+       <h3 className='lg:hidden mt-5 px-5 text-xl text-t1 underline'>Hirings</h3>
+       <div className='flex flex-col lg:mt-20 mt-5'>
+        <HomeCard postType="Service"/>
+        <HomeCard postType="Service"/>
+        <HomeCard postType="Service"/>
+       </div>
+
+      </div>
      </div>
-     {/* All Search Result Show Here */}
-     <div className='grid grid-cols-3 mt-10 gap-5'>
-       <SearchCard/>
-       <SearchCard/>
-       <SearchCard/>
-     </div>
-    </div>
-     </div>
-    </SearchLayout>
     </>
   )
 }

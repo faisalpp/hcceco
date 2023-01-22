@@ -3,7 +3,7 @@ import { RiArrowDropRightFill, RiVipDiamondFill } from 'react-icons/ri'
 
 const PopularCourseCard = () => {
   return (
-    <div className='flex flex-col bg-b3/40 lg:w-full w-80 h-auto lg:px-20 px-5'>
+    <div className='flex flex-col bg-b3/40 lg:w-11/12 w-80 h-auto lg:px-20 px-5'>
      {/* 1st row */}
      <div className='flex lg:flex-row flex-col lg:space-x-16 space-y-3 items-center lg:mt-10 mt-5'>
       <div className='flex lg:flex-row flex-col items-center'>
@@ -18,7 +18,7 @@ const PopularCourseCard = () => {
       </div>
      </div>
      {/* 2nd row */}
-     <div className='flex lg:flex-row items-center flex-col space-x-10 mt-5 mb-10 space-y-5'>
+     <div className='flex lg:flex-row items-center flex-col space-x-24 mt-5 mb-10 space-y-5'>
       <div className='flex lg:mt-5 lg:space-x-10 space-x-6'>
        <h3 className='flex items-center lg:text-xs text-[10px] underline text-t1 cursor-pointer'>Overview <RiArrowDropRightFill className='lg:visible hidden text-xl'/></h3>
        <h3 className='flex items-center lg:text-xs text-[10px] underline text-t1 cursor-pointer'>Entrance Exam <RiArrowDropRightFill className='lg:visible hidden text-xl'/></h3>

@@ -50,15 +50,7 @@ import SignupCollege from "./pages/SignupCollege";
 import MockTestResult from "./pages/CorporateTest/MockTestResult";
 
 import ProfileAll from './pages/SearchPages/ProfileAll';
-import PostsSearch from './pages/SearchPages/Posts';
-import HiringSearch from './pages/SearchPages/Hiring';
-import AnnouncementsSearch from './pages/SearchPages/Announcements';
-import QuestionsSearch from './pages/SearchPages/Questions';
-import ServicesSearch from './pages/SearchPages/Services';
-import CollegesSearch from './pages/SearchPages/Colleges';
-import CoursesSearch2 from './pages/SearchPages/Courses';
-import ExamsSearch from './pages/SearchPages/Exams';
-import CorporateSearch from './pages/SearchPages/Corporate';
+
 import ExamAboutIndex from "./pages/ExamsInnerPage/ExamAbout/ExamAboutIndex";
 import ExamFaq from "./pages/ExamsInnerPage/ExamFaq";
 import AboutIndex from "./pages/About/AboutIndex";
@@ -70,6 +62,20 @@ import CollegeProfileS5 from './pages/CollegeProfile/CollegeProfileS5';
 import ProfilePeople from "./pages/SearchPages/ProfilePeople";
 import ProfileCollege from "./pages/SearchPages/ProfileCollege";
 import PeoplePosts from "./pages/PeoplePosts";
+
+import Posts from './pages/SearchPages/Posts';
+import Hiring from "./pages/SearchPages/Hiring";
+import AnnouncementsSearch from "./pages/SearchPages/Announcements";
+import Questions from "./pages/SearchPages/Questions";
+import Services from "./pages/SearchPages/Services";
+import Colleges from "./pages/SearchPages/Colleges";
+import CoursesSearch2 from "./pages/SearchPages/Courses";
+import ExamsSearch from "./pages/SearchPages/Exams";
+import CorporateSearchTricks from "./pages/SearchPages/CorporateSearchTricks";
+import CorporateSearchWorksheet from "./pages/SearchPages/CorporateSearchWorksheet";
+import CorporateSearchMockTest from "./pages/SearchPages/CorporateSearchMockTest";
+import CorporateHcceco from "./pages/SearchPages/CorporateHcceco";
+import SearchAll from "./pages/SearchPages/SearchAll";
 
 function App() {
   return (  
@@ -118,8 +124,7 @@ function App() {
          {/* Course About Page Dynamic */}
          <Route path="/courses/about" element={<CoursesAbout/>}/>
 
-
-
+         
 
          {/* Exam Page */}
          <Route path="/exams" element={<Exams/>}/>
@@ -161,30 +166,38 @@ function App() {
        {/* Search Pages with sidebar */}
 
         {/* Profile All Search Page */}
+         <Route path="/search/all" element={<SearchAll/>}/>
+        {/* Profile All Search Page */}
          <Route path="/search/profiles/all" element={<ProfileAll/>}/>
         {/* Profile People Search Page */}
          <Route path="/search/profiles/people" element={<ProfilePeople/>}/>
         {/* Profile College Search Page */}
          <Route path="/search/profiles/college" element={<ProfileCollege/>}/>
-         
-         {/* Posts Search Page */}
-         <Route path="/search/posts" element={<PostsSearch/>}/>
-         {/* Hiring Search Page */}
-         <Route path="/search/hirings" element={<HiringSearch/>}/>
-         {/* Announcements Search Page */}
-         <Route path="/search/announcements" element={<AnnouncementsSearch/>}/>
-         {/* Questions Search Page */}
-         <Route path="/search/questions" element={<QuestionsSearch/>}/>
-         {/* Services Search Page */}
-         <Route path="/search/services" element={<ServicesSearch/>}/>
-         {/* Colleges Search Page */}
-         <Route path="/search/colleges" element={<CollegesSearch/>}/>
-         {/* Courses Search Page */}
-         <Route path="/search/courses" element={<CoursesSearch2/>}/>
-         {/* Exams Search Page */}
-         <Route path="/search/exams" element={<ExamsSearch/>}/>
-         {/* Corporate Search Page */}
-         <Route path="/search/corporate" element={<CorporateSearch/>}/>
+        {/* Posts Search Page */}
+        <Route path="/search/posts" element={<Posts/>}/>
+        {/* Hiring Search Page */}
+        <Route path="/search/hirings" element={<Hiring/>}/>
+        {/* Announcement Search Page */}
+        <Route path="/search/announcements" element={<AnnouncementsSearch/>}/>
+        {/* Question Search Page */}
+        <Route path="/search/questions" element={<Questions/>}/>
+        {/* Question Search Page */}
+        <Route path="/search/services" element={<Services/>}/>
+        {/* Colleges Search Page */}
+        <Route path="/search/colleges" element={<Colleges/>}/>
+        {/* Colleges Search Page */}
+        <Route path="/search/courses" element={<CoursesSearch2/>}/>
+        {/* Colleges Search Page */}
+        <Route path="/search/exams" element={<ExamsSearch/>}/>
+        {/* Corporate Short Tricks Search Page */}
+        <Route path="/search/corporate/short-tricks" element={<CorporateSearchTricks/>}/>
+        {/* Corporate Short Tricks Search Page */}
+        <Route path="/search/corporate/worksheets" element={<CorporateSearchWorksheet/>}/>
+        {/* Corporate Short Tricks Search Page */}
+        <Route path="/search/corporate/mocktests" element={<CorporateSearchMockTest/>}/>
+        {/* Corporate Short Tricks Search Page */}
+        <Route path="/search/corporate/hcceco-library" element={<CorporateHcceco/>}/>
+ 
 
         
        {/* College Inner Page */}

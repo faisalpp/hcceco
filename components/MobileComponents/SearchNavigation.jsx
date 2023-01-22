@@ -12,12 +12,12 @@ const SearchNavigation = () => {
     <NavLink to="/search/posts"><h3 className={`${title.pathname === "/search/posts"?'border-b-2 border-t1 text-black':'text-t3/50'}`}>Posts</h3></NavLink>
     <NavLink to="/search/hirings"><h3 className={`${title.pathname === "/search/hirings"?'border-b-2 border-t1 text-black':'text-t3/50'}`}>Hirings</h3></NavLink>
     <NavLink to="/search/announcements"><h3 className={`${title.pathname === "/search/announcements"?'border-b-2 border-t1 text-black':'text-t3/50'}`}>Announcements</h3></NavLink>
-    <NavLink to="/search/question"><h3 className={`${title.pathname === "/search/questions"?'border-b-2 border-t1 text-black':'text-t3/50'}`}>Questions</h3></NavLink>
+    <NavLink to="/search/questions"><h3 className={`${title.pathname === "/search/questions"?'border-b-2 border-t1 text-black':'text-t3/50'}`}>Questions</h3></NavLink>
     <NavLink to="/search/services"><h3 className={`${title.pathname === "/search/services"?'border-b-2 border-t1 text-black':'text-t3/50'}`}>Services</h3></NavLink>
     <NavLink to="/search/colleges"><h3 className={`${title.pathname === "/search/colleges"?'border-b-2 border-t1 text-black':'text-t3/50'}`}>Colleges</h3></NavLink>
     <NavLink to="/search/courses"><h3 className={`${title.pathname === "/search/courses"?'border-b-2 border-t1 text-black':'text-t3/50'}`}>Courses</h3></NavLink>
     <NavLink to="/search/exams"><h3 className={`${title.pathname === "/search/exams"?'border-b-2 border-t1 text-black':'text-t3/50'}`}>Exams</h3></NavLink>
-    <NavLink to="/search/corporate"><h3 className={`${title.pathname === "/search/corporate"?'border-b-2 border-t1 text-black':'text-t3/50'}`}>Corporate</h3></NavLink>
+    <NavLink to="/search/corporate/short-tricks"><h3 className={`${title.pathname === "/search/corporate/short-tricks"?'border-b-2 border-t1 text-black':'text-t3/50'}`}>Corporate</h3></NavLink>
     </div>
     </>
   )

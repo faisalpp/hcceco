@@ -3,6 +3,8 @@ import Navbar from '../../components/Navbar'
 import { RiPencilFill } from 'react-icons/ri';
 import HeadMeta from '../HeadMeta';
 import { Input, Textarea } from '@material-tailwind/react';
+import NotificationMenu from '../../components/NotificationMenu';
+import SearchBar from '../../components/HomeComponents/SearchBar';
 
 const EditProfile = () => {
 
@@ -23,6 +25,8 @@ const EditProfile = () => {
     <>
      <HeadMeta title="Edite Profile"/>
     <Navbar/>
+    <NotificationMenu/>
+    <SearchBar/>
     <div className='flex flex-col py-7 bg-white items-center w-full h-auto'>
      <div className='flex flex-col ml-3 mr-3 lg:w-4/5 h-fit justify-center'>
       <h3 className='text-t1 text-lg lg:text-3xl text-center'>Edit Profile</h3>

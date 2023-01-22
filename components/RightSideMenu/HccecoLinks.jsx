@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import HccecoMsg from './HccecoMsg';
 import MenuSearchBar from './MenuSearchBar'
 import {RiUbuntuLine} from 'react-icons/ri'
+import ChatBox from './ChatBox';
 
 const HccecoLinks = () => {
     const [Messages, setMessages] = useState(false);
@@ -18,6 +19,9 @@ const HccecoLinks = () => {
      :
      <div id="msg-wrapper" className='flex flex-col space-y-5 h-auto max-h-80 scrollbar-thin scrollbar-thumb-t1 overflow-scroll overflow-x-hidden w-full'>
       <HccecoMsg name="Kimi" msg="Hello! You There"/>
+      <ChatBox/>
+
+
       <HccecoMsg name="Kimi" msg="No Mssages Yet"/>
       <HccecoMsg name="Kimi" msg="Hello! You There"/>
       <HccecoMsg name="Kimi" msg="No Mssages Yet"/>

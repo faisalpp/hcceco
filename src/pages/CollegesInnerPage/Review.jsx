@@ -1,45 +1,55 @@
 import React from 'react'
-import { FaGraduationCap } from 'react-icons/fa'
-import { RiTimeFill, RiTimeLine } from 'react-icons/ri'
-import CollegeInnerPageLayout from '../Layouts/CollegeInnerPageLayout'
+import { FaPlusCircle } from 'react-icons/fa'
+import HeadMeta from '../../HeadMeta'
+import Navbar from '../../../components/Navbar'
+import CollegeInnerPageBanner from '../../../components/CollegesComponents/CollegeInnerPageBanner'
+import Ticker from '../../../components/CollegesComponents/Ticker'
+import CollegeNavigation from '../../../components/CollegesComponents/CollegeNavigation'
+import { useState } from 'react'
+import ReviewCard from '../../../components/ReviewCard'
+
 
 const Review = () => {
-  
+  const [readMore,setReadMore] = useState(false);  
   return (
-    <CollegeInnerPageLayout>
+    <>
+    <HeadMeta title="College About"/>
+   <Navbar/>
+   <div className='w-full lg:px-20 bg-b4 h-screen'>
+     <CollegeInnerPageBanner collegeName="A.G COLLEGE OF EDUCATION" city="COIMBATOR" state="Tamil Nadu" ugc="UGC" reviews="24" estd="ESTD" rank="2" img="https://www.dropbox.com/s/kuxadvixibll95l/college.jpg?raw=1" logo="https://www.dropbox.com/s/h4an5wsqmuued7z/avtar.PNG?raw=1"/>
+     {/* News Ticker */}
+     <Ticker data={['Announcement will show here Announcement will show here ','|',' Announcement will show here Announcement will show here']}/>
+     <CollegeNavigation/>
+     <div className='flex flex-col bg-white'>
+
      <div className='bg-white w-full h-full'>
       {/* College Rating */}
-     <div className='flex mt-10 space-x-[750px] ml-24'>
-      <div><h3 className='text-xl text-t1 font-bold'>College Rating</h3><h3 className='text-t3 text[16px]'>03 Reviews Found</h3></div>
+     <div className='flex mt-10 lg:space-x-[750px] space-x-24 ml-3 lg:ml-24'>
+      <div><h3 className='lg:text-xl text-lg text-t1 font-bold'>College Rating</h3><div className='flex items-center'><h3 className='text-t3 lg:text[16px] text-sm'>03 Reviews Found </h3><FaPlusCircle className='lg:hidden ml-3 text-xl text-t3'/></div></div>
       <div className='flex flex-col items-center'>
-       <h3 className='text-[16px]'>3.4/4</h3>
+       <h3 className='lg:text-[16px] text-sm'>3.4/4</h3>
        <div className='flex'>
-       <img src="/public/anger.png" className='rounded-full w-8 h-8'/>
-       <img src="/public/confused.png" className='rounded-full w-8 h-8'/>
-       <img src="/public/happy.png" className='rounded-full w-8 h-8'/>
-       <img src="/public/love.png" className='rounded-full w-8 h-8'/>
+       <img src="/public/anger.png" className='rounded-full w-4 h-4 lg:w-8 lg:h-8'/>
+       <img src="/public/confused.png" className='rounded-full w-4 h-4 lg:w-8 lg:h-8'/>
+       <img src="/public/happy.png" className='rounded-full w-4 h-4 lg:w-8 lg:h-8'/>
+       <img src="/public/love.png" className='rounded-full w-4 h-4 lg:w-8 lg:h-8'/>
        </div>
       </div>
      </div>
+     </div>
 
      {/* Review Card */}
-     <div className='flex flex-col ml-20 mt-10 border-2 border-t3/30 px-10 py-10 shadow-xl'>
-      <div className='flex items-center space-x-3'>
-        <img src="https://www.dropbox.com/s/h4an5wsqmuued7z/avtar.PNG?raw=1" className='w-12 h-12 rounded-full'/>
-        <div className='flex flex-col'>
-          <h3 className='font-bold text-[16px]'>Faisal</h3>
-         <div className='flex space-x-10 text-sm text-t3'><h3 >Enrolled 2021</h3><h3 className='flex items-center'><FaGraduationCap className='mr-2'/> Bachelor of Science</h3><h3 className='flex items-center'><RiTimeFill className='mr-2'/> July 29 2022</h3></div>
-        </div>
-      </div>
-      <div className="flex flex-col mt-5">
-        <h3 className='text-t1'>Review title of the review</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, eaque deserunt nam temporibus eligendi minus cupiditate qui delectus alias rem consequatur quisquam! Corporis deserunt eum odit quis nam excepturi sit?</p>
-      </div>
+     <div className='flex flex-col mb-10'>
+      <ReviewCard/>
+      <ReviewCard/>
+      <ReviewCard/>
+      <ReviewCard/>
      </div>   
   
 
      </div>
-    </CollegeInnerPageLayout>
+     </div>
+     </>
   )
 }
 
