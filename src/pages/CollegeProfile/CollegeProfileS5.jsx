@@ -3,12 +3,14 @@ import { RiArrowDropDownFill, RiArrowDropUpFill } from 'react-icons/ri'
 import CollegeProfileNavbar from '../../../components/CollegesComponents/CollegeProfileNavbar'
 import Navbar from '../../../components/Navbar'
 import HeadMeta from '../../HeadMeta'
+import MobileFloats from '../MobileFloats'
 
 const CollegeProfileS5 = () => {
   return (
     <>
   <HeadMeta title="Edite Profile"/>
     <Navbar/>
+    <MobileFloats/>
     <div className='flex flex-col py-7 bg-white items-center w-full h-screen'>
      <div className='flex flex-col lg:ml-3 lg:mr-3 w-full lg:px-20 h-fit items-center justify-center'>
      <CollegeProfileNavbar/>

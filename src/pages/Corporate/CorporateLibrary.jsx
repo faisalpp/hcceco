@@ -7,6 +7,7 @@ import NotificationMenu from '../../../components/NotificationMenu'
 import SearchBar from '../../../components/HomeComponents/SearchBar'
 import { NavLink } from 'react-router-dom'
 import { RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri'
+import MobileFloats from '../MobileFloats'
 
 const CorporateLibrary = () => {
   
@@ -17,6 +18,7 @@ const CorporateLibrary = () => {
     <>
     <HeadMeta title="Corporate Library"/>
     <Navbar/>
+    <MobileFloats/>
     <NotificationMenu/>
     <SearchBar/>
     <div className='grid lg:grid-cols-12 grid-flow-row-dense w-full h-auto'>

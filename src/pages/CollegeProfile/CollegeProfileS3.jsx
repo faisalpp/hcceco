@@ -4,6 +4,7 @@ import HeadMeta from '../../HeadMeta';
 import CollegeProfileNavbar from '../../../components/CollegesComponents/CollegeProfileNavbar';
 import { Select,Option } from '@material-tailwind/react';
 import { FaTrash,FaPlus } from 'react-icons/fa';
+import MobileFloats from '../MobileFloats';
 
 const CollegeProfileS3 = () => {
 
@@ -11,6 +12,7 @@ const CollegeProfileS3 = () => {
     <>
      <HeadMeta title="Edite Profile"/>
     <Navbar/>
+    <MobileFloats/>
     <div className='flex flex-col py-7 bg-white items-center w-full h-auto'>
      <div className='flex flex-col lg:ml-3 lg:mr-3 lg:w-4/5 w-full h-fit justify-center items-center'>
       <h3 className='text-t1 text-lg lg:text-3xl text-center'>Edit Profile</h3>

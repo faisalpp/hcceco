@@ -28,7 +28,14 @@ import Faq from './pages/CollegesInnerPage/Faq';
 //Below Imports are all related to course and its Details
 import Courses from '../src/pages/Courses';
 import CoursesSearch from '../src/pages/CoursesSearch';
-import CoursesAbout from "./pages/CoursesInnerPage/CoursesAbout";
+import AboutCourse from './pages/CoursesInnerPage/AboutCourse';
+import AfterCareer from './pages/CoursesInnerPage/AfterCareer';
+import AfterCourse from './pages/CoursesInnerPage/AfterCourse';
+import AverageFees from './pages/CoursesInnerPage/AverageFees';
+import CourseEligibility from './pages/CoursesInnerPage/Eligibility';
+import ExamBook from './pages/CoursesInnerPage/ExamBook';
+import SalaryTrend from './pages/CoursesInnerPage/SalaryTrend';
+import Specialization from './pages/CoursesInnerPage/Specialization';
 
 // Exam Page
 import Exams from './pages/Exams';
@@ -51,7 +58,6 @@ import MockTestResult from "./pages/CorporateTest/MockTestResult";
 
 import ProfileAll from './pages/SearchPages/ProfileAll';
 
-import ExamAboutIndex from "./pages/ExamsInnerPage/ExamAbout/ExamAboutIndex";
 import ExamFaq from "./pages/ExamsInnerPage/ExamFaq";
 import AboutIndex from "./pages/About/AboutIndex";
 import CollegeProfileS1 from './pages/CollegeProfile/CollegeProfileS1';
@@ -76,6 +82,25 @@ import CorporateSearchWorksheet from "./pages/SearchPages/CorporateSearchWorkshe
 import CorporateSearchMockTest from "./pages/SearchPages/CorporateSearchMockTest";
 import CorporateHcceco from "./pages/SearchPages/CorporateHcceco";
 import SearchAll from "./pages/SearchPages/SearchAll";
+import Definitaion from "./pages/ExamsInnerPage/ExamAbout/Definition";
+import ExamHelp from './pages/ExamsInnerPage/ExamAbout/ExamHelp'
+import ExamHighlights from './pages/ExamsInnerPage/ExamAbout/ExamHighlights'
+import ExamPattern from './pages/ExamsInnerPage/ExamAbout/ExamPattern'
+import ExamPrevYearCutoff from './pages/ExamsInnerPage/ExamAbout/ExamPrevYearCutoff'
+import ExamSyllabus from './pages/ExamsInnerPage/ExamAbout/ExamSyllabus'
+import ImportantDates from './pages/ExamsInnerPage/ExamAbout/ImportantDates'
+import PrevYearsPapers from './pages/ExamsInnerPage/ExamAbout/PrevYearsPapers'
+import ImportantExamBook from './pages/ExamsInnerPage/ExamAbout/ImportantExamBook'
+import Registration from "./pages/ExamsInnerPage/Registration";
+import AdmitCard from "./pages/ExamsInnerPage/AdmitCard";
+import Reservation from "./pages/ExamsInnerPage/Reservation";
+import ExamCenters from "./pages/ExamsInnerPage/ExamCenters";
+import Eligibility from "./pages/ExamsInnerPage/Eligibility";
+import Syllabus from "./pages/ExamsInnerPage/Syllabus";
+import PreparationTips from "./pages/ExamsInnerPage/PreparationTips";
+import Counsling from "./pages/ExamsInnerPage/Counsling";
+import ParticipatingColleges from "./pages/ExamsInnerPage/ParticipatingColleges";
+import TopRecruiter from "./pages/CoursesInnerPage/TopRecruiter";
 
 function App() {
   return (  
@@ -122,19 +147,71 @@ function App() {
          {/* Courses Search Page */}
          <Route path="/courses/search" element={<CoursesSearch/>}/>
          {/* Course About Page Dynamic */}
-         <Route path="/courses/about" element={<CoursesAbout/>}/>
+         <Route path="/course/about" element={<AboutCourse/>}/>
+         {/* Course After Course Page Dynamic */}
+         <Route path="/course/after-course" element={<AfterCourse/>}/>
+         {/* Course After Carrier Page Dynamic */}
+         <Route path="/course/after-carrier" element={<AfterCareer/>}/>
+         {/* Course Average Fee Page Dynamic */}
+         <Route path="/course/average-fees" element={<AverageFees/>}/>
+         {/* Course Eligibility Page Dynamic */}
+         <Route path="/course/eligibility" element={<CourseEligibility/>}/>
+         {/* Course Exam Book Dynamic */}
+         <Route path="/course/exam-book" element={<ExamBook/>}/>
+         {/* Course Salary Trends Dynamic */}
+         <Route path="/course/salary-trends" element={<SalaryTrend/>}/>
+         {/* Course Specialization Dynamic */}
+         <Route path="/course/specialization" element={<Specialization/>}/>
+         {/* Course Top Recruiters Dynamic */}
+         <Route path="/course/top-recruiters" element={<TopRecruiter/>}/>
 
          
 
-         {/* Exam Page */}
+         {/* Exam Main Page */}
          <Route path="/exams" element={<Exams/>}/>
-         {/* Exam About Page */}
-         <Route path="/exam/about" element={<ExamAboutIndex/>}/>
-         {/* Exam About Page */}
+          {/* Exam About and Its Sub Menu Links */}
+           {/* Exam About | Definition */}
+           <Route path="/exam/about/definition" element={<Definitaion/>}/>
+           {/* Exam About | Highlights */}
+           <Route path="/exam/about/exam-highlights" element={<ExamHighlights/>}/>
+           {/* Exam About | Exam Help */}
+           <Route path="/exam/about/exam-help" element={<ExamHelp/>}/>
+           {/* Exam About | Exam Pattern */}
+           <Route path="/exam/about/exam-pattern" element={<ExamPattern/>}/>
+           {/* Exam About | Exam Previous Year Cutoff */}
+           <Route path="/exam/about/previous-year-cutoff" element={<ExamPrevYearCutoff/>}/>
+           {/* Exam About | Exam syllabus */}
+           <Route path="/exam/about/exam-syllabus" element={<ExamSyllabus/>}/>
+           {/* Exam About | Exam Imporant Dates */}
+           <Route path="/exam/about/important-dates" element={<ImportantDates/>}/>
+           {/* Exam About | Exam Important Books */}
+           <Route path="/exam/about/important-exam-books" element={<ImportantExamBook/>}/>
+           {/* Exam About | Exam Previous Year Papers */}
+           <Route path="/exam/about/previous-year-papers" element={<PrevYearsPapers/>}/>
+         {/* Exam Registration Page */}
+         <Route path="/exam/registration" element={<Registration/>}/>
+         {/* Exam Admit Card Page */}
+         <Route path="/exam/admit-card" element={<AdmitCard/>}/>
+         {/* Exam Important Dates Page */}
+         <Route path="/exam/important-dates" element={<ImportantDates/>}/>
+         {/* Exam Reservation Page */}
+         <Route path="/exam/reservation" element={<Reservation/>}/>
+         {/* Exam Exam Center Page */}
+         <Route path="/exam/exam-center" element={<ExamCenters/>}/>
+         {/* Exam Eligibility Page */}
+         <Route path="/exam/eligibility" element={<Eligibility/>}/>
+         {/* Exam Patterns Page */}
+         <Route path="/exam/exam-pattern" element={<ExamPattern/>}/>
+         {/* Exam Syllabus Page */}
+         <Route path="/exam/syllabus" element={<Syllabus/>}/>
+         {/* Exam Preparation Tips Page */}
+         <Route path="/exam/tips" element={<PreparationTips/>}/>
+         {/* Exam Preparation Tips Page */}
+         <Route path="/exam/counsling" element={<Counsling/>}/>
+         {/* Exam FAQ Page */}
          <Route path="/exam/faq" element={<ExamFaq/>}/>
-         
-         
-         
+         {/* Exam Participating Colleges Page */}
+         <Route path="/exam/participating-colleges" element={<ParticipatingColleges/>}/>
          
          {/* Corporate Short Tricks */}
          <Route path="/corporate/short-tricks" element={<CorporateShortTricks/>}/>

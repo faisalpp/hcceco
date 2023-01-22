@@ -6,7 +6,7 @@ import SuggestedLinks from '../../components/HomeComponents/SuggestedLinks';
 import SearchBar from '../../components/SearchBar';
 import Layout from './Layouts/Layout';
 import {useTitle} from '../../customeHooks/useTitle'
-import MobilePopups from './MobilePopups';
+import MobilePopups from './MobileFloats';
 
 const Home = () => {
   useTitle("Home")

@@ -6,6 +6,7 @@ import Navbar from '../../components/Navbar';
 import { RiSearch2Line } from 'react-icons/ri';
 import TrendingCoursesMenu from '../../components/CoursesComponent/SideBar/TrendingCoursesMenu';
 import ChoseByDreamMenu from '../../components/CoursesComponent/SideBar/ChoseByDreamMenu';
+import MobileFloats from './MobileFloats';
 
 
 const CoursesSearch = () => {
@@ -13,6 +14,7 @@ const CoursesSearch = () => {
    <>
     <HeadMeta title="Courses"/>
     <Navbar/>
+    <MobileFloats/>
     <div className='lg:grid grid-cols-12 w-full'>
       <div className='col-start-1 col-end-4 lg:flex hidden flex-col items-center'>
         <form action='/search' method='post' className='flex bg-white w-60 mt-10 py-2 rounded-md text-xs px-2'><input type="search" placeholder='Search' className='border-none w-full'/><RiSearch2Line className='text-xl'/></form>

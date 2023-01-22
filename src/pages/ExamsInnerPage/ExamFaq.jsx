@@ -1,22 +1,22 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Navbar from '../../../components/Navbar'
-import { NavLink, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import FaqQuestionAnswer from '../../../components/FaqQuestionAnswer'
 import ExamInnerNavbar from '../../../components/ExamComponents/ExamInnerNavbar'
+import HeadMeta from '../../HeadMeta'
+import ExamSideBar from '../../../components/ExamComponents/ExamSideBar'
 
 const ExamFaq = () => {
-  const [tabIndex,setTabIndex] = useState(0)
+
   const title = useLocation()
   return (
     <>
     <Navbar/>
+    <HeadMeta title="Exam FAQ"/>
     <ExamInnerNavbar/>
     <div className='grid lg:grid-cols-12 grid-flow-row-dense w-full'>
       <div className='lg:col-start-1 lg:col-end-4 flex lg:flex-col flex-row items-center'>   
-        {/* COurses inner menu */}
-        <div className='flex lg:flex-col flex-row lg:space-x-0 space-x-2 lg:py-5 bg-white lg:h-80 h-fit lg:w-72 w-[360px] lg:mb-10 lg:rounded-md lg:mt-7 lg:ml-7 lg:overflow-auto overflow-scroll py-2'>
-        <div className={`${title.pathname === "/exam/faq" ? 'lg:border-l-4 lg:border-b-0 border-b-4 border-t1 lg:bg-t1/20 lg:[&>p]:text-t1 [&>p]:text-black':null} lg:hover:border-l-4 lg:border-l-4 border-white py-2 cursor-pointer hover:border-t1 px-5 lg:hover:bg-t1/20 group`}><p className='lg:group-hover:text-t1 text-t3 w-max'>GENERAL</p></div>
-        </div>
+      <ExamSideBar data={[{'name':'DEFINITION','url':'/exam/about/definition'},{'name':'EXAM HIGHLIGHTS','url':'/exam/about/exam-highlights'},{'name':'IMPORTANT DATES','url':'/exam/about/important-dates'},{'name':'EXAM PATTERN','url':'/exam/about/exam-pattern'},{'name':'EXAM SYLLABUS','url':'/exam/about/exam-syllabus'},{'name':'IMPORTANT EXAM BOOKS','url':'/exam/about/important-exam-books'},{'name':'EXAM HELPLINE','url':'/exam/about/exam-help'},{'name':'EXAM PREVIOUS YEAR CUTOFF','url':'/exam/about/previous-year-cutoff'},{'name':'PREVIOUS YEAR PAPERS','url':'/exam/about/previous-year-papers'}]}/> 
       </div>
 
       <main className='lg:col-start-4 lg:col-end-13 w-full h-screen'>

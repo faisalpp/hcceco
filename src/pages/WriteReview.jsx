@@ -4,6 +4,7 @@ import { RiQuestionFill } from 'react-icons/ri'
 import HeadMeta from '../HeadMeta'
 
 import { Select,Option,Input,Textarea, Checkbox } from '@material-tailwind/react'
+import MobileFloats from './MobileFloats'
 
 const WriteReview = () => {
   
@@ -11,6 +12,7 @@ const WriteReview = () => {
     <>
     <HeadMeta title="Write a Review"/> 
     <Navbar/>
+    <MobileFloats/>
     <h3 className='text-center text-t1 text-2xl bg-white py-10'>How was your experience?</h3>
     <form className='flex flex-col space-y-10 bg-white w-full h-auto px-5 lg:px-60'>
      {/* Form Group */}

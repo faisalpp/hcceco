@@ -4,10 +4,12 @@ import SearchBar from '../../components/SearchBar'
 import PostEvent from '../../components/HomeComponents/PostEvent'
 import MessageBox from '../../components/HomeComponents/MessageBox'
 import SuggestedLinks from '../../components/HomeComponents/SuggestedLinks'
+import MobileFloats from './MobileFloats'
 
 const HomeMessages = () => {
   return (
     <Layout>
+    <MobileFloats/>
     <div className='flex flex-col space-y-16 mt-5 ml-5 mr-5'>
      <SearchBar/>
      <PostEvent/>

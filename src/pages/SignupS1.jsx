@@ -5,6 +5,7 @@ import {Select,Option,Input,Textarea} from '@material-tailwind/react'
 import { useLocation } from 'react-router-dom'
 import { RiEye2Line, RiEyeCloseLine, RiSearchEyeLine } from 'react-icons/ri'
 import { AiFillEye, AiFillEyeInvisible, AiOutlineEye } from 'react-icons/ai'
+import MobileFloats from './MobileFloats'
 
 const SignupS1 = () => {
 
@@ -63,6 +64,7 @@ const SignupS1 = () => {
     <>
     <HeadMeta title="Signup"/>
     <Navbar/>
+    <MobileFloats/>
     <div className='flex flex-col bg-white w-full h-auto items-center py-20'>
       <div className='lg:flex hidden flex-col mt-20'>
         <h3 className='text-6xl'>LOGO</h3>

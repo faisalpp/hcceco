@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Navbar from '../../../components/Navbar'
 import HeadMeta from '../../HeadMeta';
 import CollegeProfileNavbar from '../../../components/CollegesComponents/CollegeProfileNavbar';
+import MobileFloats from '../MobileFloats';
 
 const CollegeProfileS4 = () => {
 
@@ -9,6 +10,7 @@ const CollegeProfileS4 = () => {
     <>
      <HeadMeta title="Edite Profile"/>
     <Navbar/>
+    <MobileFloats/>
     <div className='flex flex-col py-7 bg-white items-center w-full h-auto'>
      <div className='flex flex-col ml-3 mr-3 lg:w-4/5 h-fit justify-center'>
       <h3 className='text-t1 text-lg lg:text-3xl text-center'>Edit Profile</h3>

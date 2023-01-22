@@ -4,6 +4,7 @@ import HeadMeta from '../HeadMeta'
 import {Select,Option,Input} from '@material-tailwind/react'
 import { useLocation } from 'react-router-dom'
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
+import MobileFloats from './MobileFloats'
 
 const SignupCollege = () => {
 
@@ -62,6 +63,7 @@ const SignupCollege = () => {
     <>
     <HeadMeta title="Signup"/>
     <Navbar/>
+    <MobileFloats/>
     <div className='flex flex-col bg-white w-full h-auto items-center py-20'>
       <div className='flex flex-col lg:mt-20'>
         <h3 className='lg:flex hidden text-6xl'>LOGO</h3>

@@ -17,9 +17,12 @@ const MobNavBar = () => {
              
        {/* Notifications and Chat Icons with states */}
        <div className='col-start-8 col-end-10 flex space-x-2 text-2xl'>
-        <div>{state.mobNtf ? <VscBell onClick={()=>state.setMobNtf(false)}/>:<VscBell onClick={()=>state.setMobNtf(true)}/>}{state.ntfMsg?<div className='absolute top-8 right-[93px] h-[8px] w-[8px] rounded-full bg-red-500 text-[10px] text-transparent'>n</div>:null}</div>
+        <div className='relative' >
+          {state.mobNtf ? <VscBell onClick={()=>state.setMobNtf(false)}/>:
+          <VscBell onClick={()=>state.setMobNtf(true)}/>}
+          {state.ntfMsg?<div className='absolute top-1 right-0 h-[8px] w-[8px] rounded-full bg-red-500 text-[10px] text-transparent'>n</div>:null}</div>
         
-        <div>{state.mobMsg?<RiChatSmile2Line onClick={()=>state.setMobMsg(false)}/>:<RiChatSmile2Line onClick={()=>state.setMobMsg(true)}/>}{state.chtState?<div className='absolute top-8 right-[60px] h-[8px] w-[8px] rounded-full bg-red-500 text-[10px] text-transparent'>n</div>:null}</div>
+        <div className='relative'>{state.mobMsg?<RiChatSmile2Line onClick={()=>state.setMobMsg(false)}/>:<RiChatSmile2Line onClick={()=>state.setMobMsg(true)}/>}{state.chtState?<div className='absolute top-1 right-0 h-[8px] w-[8px] rounded-full bg-red-500 text-[10px] text-transparent'>n</div>:null}</div>
         </div>
        
        {/* Menu Button */}

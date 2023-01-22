@@ -6,6 +6,7 @@ import CollegeInnerPageBanner from '../../../components/CollegesComponents/Colle
 import Ticker from '../../../components/CollegesComponents/Ticker'
 import CollegeInnerSidebar from '../../../components/CollegesComponents/CollegeInnerSideBar'
 import CollegeNavigation from '../../../components/CollegesComponents/CollegeNavigation'
+import MobileFloats from '../MobileFloats'
 
 
 const Announcements = () => {
@@ -13,6 +14,7 @@ const Announcements = () => {
     <>
     <HeadMeta title="College About"/>
     <Navbar/>
+    <MobileFloats/>
     <div className='w-full lg:px-20 bg-b4 h-screen'>
       <CollegeInnerPageBanner collegeName="A.G COLLEGE OF EDUCATION" city="COIMBATOR" state="Tamil Nadu" ugc="UGC" reviews="24" estd="ESTD" rank="2" img="https://www.dropbox.com/s/kuxadvixibll95l/college.jpg?raw=1" logo="https://www.dropbox.com/s/h4an5wsqmuued7z/avtar.PNG?raw=1"/>
       {/* News Ticker */}

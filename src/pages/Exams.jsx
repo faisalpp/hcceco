@@ -10,12 +10,14 @@ import SearchBar from '../../components/HomeComponents/SearchBar'
 import { AiOutlineControl } from 'react-icons/ai'
 import { AppContext } from '../../context/GlobalContext'
 import ExamFilterMenu from '../../components/MobileComponents/ExamFilterMenu'
+import MobileFloats from './MobileFloats'
 
 const Exams = () => {
   const state = useContext(AppContext)
   return (
     <>
     <HeadMeta title="Exams"/>
+    <MobileFloats/>
     <ExamFilterMenu/>
     <Navbar/>
     <NotificationMenu/>

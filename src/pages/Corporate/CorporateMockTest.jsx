@@ -4,6 +4,7 @@ import HeadMeta from '../../HeadMeta'
 import CorporateSideBar from '../../../components/CorporateComponents/CorporateSideBar'
 import MockTestList from '../../../components/CorporateComponents/MockTestCard'
 import { RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri'
+import MobileFloats from '../MobileFloats'
 
 const CorporateMockTest = () => {
 
@@ -14,6 +15,7 @@ const CorporateMockTest = () => {
     <>
     <HeadMeta title="Corporate Mock Tests"/>
     <Navbar/>
+    <MobileFloats/>
     <div className='grid lg:grid-cols-12 grid-flow-row-dense w-full h-auto'>
       <div className='col-start-1 col-end-4 lg:flex hidden flex-col mt-20 items-center'>
         <CorporateSideBar title='Short Tricks' cardColor="green" data={['Reasoning Short Ticks','Quantitative Aptitude Short Tricks','Verbal Ability','Soft Skills/Personality Development','Interview Preparation']}/>  

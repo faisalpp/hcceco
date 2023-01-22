@@ -9,12 +9,14 @@ import ChoseByDreamMenu from '../../components/CoursesComponent/SideBar/ChoseByD
 import SearchBar from '../../components/HomeComponents/SearchBar';
 import NotificationMenu from '../../components/NotificationMenu';
 import { AiOutlineControl } from 'react-icons/ai';
+import MobileFloats from './MobileFloats';
 
 const Courses = () => {
   return (
     <>
     <HeadMeta title="Courses"/>
     <Navbar/>
+    <MobileFloats/>
     <SearchBar/>
     <NotificationMenu/>
     <div className='lg:grid grid-cols-12 w-full'>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 import Navbar from '../../components/Navbar'
+import MobileFloats from './MobileFloats'
 
 
 const SignupS2 = () => {
@@ -9,6 +10,7 @@ const SignupS2 = () => {
   return (
     <>
     <Navbar/>
+    <MobileFloats/>
     <div style={{'height':'calc(100vh - 80px)'}} className='flex flex-col bg-white w-full items-center py-10'>
     <div className='flex flex-col mt-5'>
       <h3 className='lg:flex hidden text-6xl'>LOGO</h3>

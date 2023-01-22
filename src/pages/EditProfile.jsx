@@ -5,6 +5,7 @@ import HeadMeta from '../HeadMeta';
 import { Input, Textarea } from '@material-tailwind/react';
 import NotificationMenu from '../../components/NotificationMenu';
 import SearchBar from '../../components/HomeComponents/SearchBar';
+import MobileFloats from './MobileFloats';
 
 const EditProfile = () => {
 
@@ -25,6 +26,7 @@ const EditProfile = () => {
     <>
      <HeadMeta title="Edite Profile"/>
     <Navbar/>
+    <MobileFloats/>
     <NotificationMenu/>
     <SearchBar/>
     <div className='flex flex-col py-7 bg-white items-center w-full h-auto'>
