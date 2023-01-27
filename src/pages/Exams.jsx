@@ -11,9 +11,11 @@ import { AiOutlineControl } from 'react-icons/ai'
 import { AppContext } from '../../context/GlobalContext'
 import ExamFilterMenu from '../../components/MobileComponents/ExamFilterMenu'
 import MobileFloats from './MobileFloats'
+import { useState } from 'react'
 
 const Exams = () => {
   const state = useContext(AppContext)
+  const [searchQuery,setSearchQuery] = useState('');
   return (
     <>
     <HeadMeta title="Exams"/>
@@ -24,7 +26,7 @@ const Exams = () => {
     <SearchBar/>
     <div className='grid lg:grid-cols-12 grid-flow-row-dense w-full h-auto'>
       <div className='col-start-1 col-end-4 lg:flex hidden flex-col items-center'>
-       <form action='/search' method='post' className='flex bg-white w-60 mt-10 py-2 rounded-md text-xs px-2'><input type="search" placeholder='Search' className='border-none w-full'/><RiSearch2Line className='text-xl'/></form>
+       <form onSubmit={(event)=>{alert(searchQuery);event.preventDefault();setSearchQuery('');}} className='flex items-center bg-white w-60 mt-10 rounded-md text-xs px-2'><input value={searchQuery} onChange={(e)=>setSearchQuery(e.target.value)} type="search" placeholder='Search' className='border-none w-full'/><RiSearch2Line className='text-xl'/></form>
        <div className='flex text-[17px] items-center space-x-10 mt-8'><h3>Found 02 Course</h3><a className='underline text-xs'>Set Default</a></div>
        <CollapsesSideBar formUrl="/" mehtod="post"  cardColor="green" title="Examination Type" option={['State Wise','National Wise']}/>   
        <CollapsesSideBar formUrl="/" mehtod="post"  cardColor="orange" title="Application Mode" option={['Online','Offline','Both']}/>   

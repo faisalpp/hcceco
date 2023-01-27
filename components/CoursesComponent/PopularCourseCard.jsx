@@ -3,7 +3,7 @@ import { RiArrowDropRightFill, RiVipDiamondFill } from 'react-icons/ri'
 
 const PopularCourseCard = () => {
   return (
-    <div className='flex flex-col bg-b3/40 lg:w-11/12 w-80 h-auto lg:px-20 px-5'>
+    <div className='flex flex-col bg-b3/40 lg:w-full w-80 h-auto lg:px-20 px-5'>
      {/* 1st row */}
      <div className='flex lg:flex-row flex-col lg:space-x-16 space-y-3 items-center lg:mt-10 mt-5'>
       <div className='flex lg:flex-row flex-col items-center'>
@@ -26,8 +26,6 @@ const PopularCourseCard = () => {
       </div>
       <button className='lg:flex hidden border-2 border-t1 text-sm px-5 rounded-md py-2'><h3 className='hover:text-t1 hover:underline cursor-pointer'>12 Colleges Offering This Course</h3></button>
      </div>
-    
-
 
     </div>
   )

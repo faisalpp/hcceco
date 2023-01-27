@@ -1,11 +1,12 @@
 import React, { useContext, useState } from 'react';
 import {RiHome3Line,RiGovernmentLine,RiFileList3Line,RiArticleLine,RiGroup2Line,RiSearch2Line,RiArrowDropDownLine} from 'react-icons/ri'
-import {VscBellDot,VscBell} from 'react-icons/vsc';
+import {VscBell} from 'react-icons/vsc';
 import { NavLink } from 'react-router-dom';
 import { AppContext } from '../context/GlobalContext';
 import MobNavBar from '../components/MobileComponents/MobNavBar'
-import MobMenu from './MobileComponents/MobMenu';
 import { useLocation } from 'react-router-dom';
+import {ImMobile} from 'react-icons/im';
+import {CgFileDocument} from 'react-icons/cg';
 
 const Navbar = () => {
   const title = useLocation();
@@ -34,7 +35,10 @@ const Navbar = () => {
      
       </div>
     <div className='col-start-11 col-end-16 flex space-x-5'>
-      <button className='border-2 border-gray-500 rounded-md w-fit h-fit px-2 py-2'>Get App</button>
+      <div>
+      <button className='w-fit h-fit px-2 py-2'><CgFileDocument className='text-3xl'/> </button>
+      <button className='w-fit h-fit px-2 py-2'><ImMobile className='text-3xl'/> </button>
+      </div>
     
        {/* IF false then show login btn else show logged in user image */}
       {state.isLogin ? <div className='flex items-center space-x-1'><img src="https://www.dropbox.com/s/h4an5wsqmuued7z/avtar.PNG?raw=1" className='rounded-full w-9 h-9'/><div onClick={()=> setUserMenu(true)} className='flex text-sm items-center text-t1 cursor-pointer'><h3>Argha Paul</h3><RiArrowDropDownLine className='text-2xl'/></div></div>

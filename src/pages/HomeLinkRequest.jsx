@@ -1,5 +1,5 @@
 import React from 'react'
-import HomeCard from '../../components/HomeComponents/HomeCard'
+import HomeCard from '../../components/HomeComponents/HomeCard/HomeCard'
 import MessageBox from '../../components/HomeComponents/MessageBox'
 import Layout from './Layouts/Layout'
 import SearchBar from '../../components/SearchBar';

@@ -3,7 +3,7 @@ import SearchSideBar from '../../../components/SearchSideBar'
 import Navbar from '../../../components/Navbar'
 import SearchNavigation from '../../../components/MobileComponents/SearchNavigation'
 import { useLocation } from 'react-router-dom'
-import HomeCard from '../../../components/HomeComponents/HomeCard'
+import HomeCard from '../../../components/HomeComponents/HomeCard/HomeCard'
 
 const ProfileAll = () => {
   const title = useLocation()

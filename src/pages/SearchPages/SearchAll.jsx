@@ -7,7 +7,7 @@ import { useLocation } from 'react-router-dom'
 import { Input } from '@material-tailwind/react'
 import { RiSearch2Line } from 'react-icons/ri'
 import { NavLink } from 'react-router-dom'
-import HomeCard from '../../../components/HomeComponents/HomeCard'
+import HomeCard from '../../../components/HomeComponents/HomeCard/HomeCard'
 
 const ProfileAll = () => {
   const title = useLocation()

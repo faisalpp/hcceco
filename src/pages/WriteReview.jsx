@@ -93,19 +93,12 @@ const WriteReview = () => {
      <h3 className='text-t1 mt-5'>Rate your college based on overall experience</h3>
     {/* Emoji Wrapper */}
     <div className='flex space-x-5'>
-      <Checkbox />
+      <img src="/public/anger.png" className='rounded-full'/>
       <img src="/public/confused.png" className='rounded-full'/>
       <img src="/public/happy.png" className='rounded-full'/>
-      <label for="myCheckbox1"><img src="/public/love.png" className='rounded-full'/></label>
+      <img src="/public/love.png" className='rounded-full'/>
     </div> 
     {/* Emoji Wrapper End */}
-    <div><ul>
-    <li>
-     <input type="checkbox" id="myCheckbox1" />
-     <label for="myCheckbox1"><img src="/public/happy.png" /></label>
-    </li></ul>
-    </div>
-
 
      {/* Review Title */}
      <div className='w-2/3 mt-5'>

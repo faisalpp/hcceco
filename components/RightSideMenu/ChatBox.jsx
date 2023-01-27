@@ -4,12 +4,12 @@ import { AiFillCloseSquare, AiOutlineSend } from 'react-icons/ai'
 import { RiLink, RiSendPlane2Fill } from 'react-icons/ri'
 import ChatUser from '../ChatBoxDesk/ChatUser'
 
-const ChatBox = () => {
-  const [chatBox,setChatBox] = useState(false);
+const ChatBox = ({chatBox,setChatBox}) => {
+
   return (
     <>
     {/* Message */}
-    <div className={` ${chatBox ? 'hidden' :'absolute'} right-96 w-80 h-[454px] bg-white shadow-xl`}>
+    <div className={` ${chatBox ? 'absolute' : 'hidden'} right-96 w-80 h-[454px] bg-white shadow-xl`}>
      <div className='flex bg-t1 px-2 py-3 space-x-3'>
        <img src="/public/avtar.png" className='w-10 h-10 rounded-full'/>
       <div className='flex space-x-16'>
@@ -17,7 +17,7 @@ const ChatBox = () => {
         <h3 className='text-[15px]'>A.G College Of Tech</h3>
         <h3 className='text-[11px]'>Active 2Hrs Ago</h3>
        </div>
-       <AiFillCloseSquare onClick={()=>setChatBox(true)} className='text-white text-xl cursor-pointer'/>
+       <AiFillCloseSquare onClick={()=>setChatBox(false)} className='text-white text-xl cursor-pointer'/>
       </div>  
      </div>
      

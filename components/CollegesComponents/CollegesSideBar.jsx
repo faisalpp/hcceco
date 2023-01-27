@@ -1,11 +1,15 @@
 import React from 'react'
+import { useState } from 'react'
 import { RiSearch2Line } from 'react-icons/ri'
 import SideBarCard from './SideBarCard'
 
 const CollegesSideBar = ({numberOfColleges}) => {
+  
+  const [searchQuery,setSearchQuery] = useState('');
+
   return (
     <div className='flex flex-col px-10 py-10 mt-2 w-fit h-screen '>
-     <div className='flex items-center w-fit h-fit bg-white py-2 px-2 rounded-md shadow-lg'><input type="search" placeholder='Search Here' className='outline-none h-full text-sm border-none'/><RiSearch2Line className='text-xl'/></div>
+     <form onSubmit={(event)=>{alert(searchQuery);event.preventDefault();setSearchQuery('');}} className='flex items-center w-fit h-fit bg-white px-2 rounded-md'><input value={searchQuery} onChange={(e)=>setSearchQuery(e.target.value)} type="search" placeholder='Search Here' className='outline-none h-full focus:ring-0 text-sm border-none'/><RiSearch2Line className='text-xl'/></form>
      <div className='flex flex-col mt-5'>
         <div className='flex items-center space-x-10'><h3>Found {numberOfColleges} Colleges</h3><a className='text-xs mt-1 underline text-t2'>Set Default</a></div>
      </div>

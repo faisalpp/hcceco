@@ -7,6 +7,7 @@ import { AiOutlineControl } from 'react-icons/ai'
 import { RiSearch2Line } from 'react-icons/ri'
 import MobFilterMenu from '../../components/MobileComponents/FilterMenu'
 import { AppContext } from '../../context/GlobalContext'
+import { NavLink } from 'react-router-dom'
 
 const CollegesHome = () => {
   const state = useContext(AppContext)
@@ -17,7 +18,7 @@ const CollegesHome = () => {
     {/* Desktop Filters */}
     <div className='hidden lg:flex flex-col items-center'>
       <div className='mt-10'><h3 className='text-t1 text-2xl font-semibold'>LIST TOP COLLEGES IN INDIA BASED ON 2022 BANKING</h3></div>
-      <SearchFilter filterName="COLLEGE" streams={['Engineering']}/>
+      <SearchFilter filterName="COLLEGE" streams={['Engineering','Engineering','Engineering','Engineering','Engineering','Engineering','Engineering','Engineering','Engineering',]}/>
       <SearchFilter filterName="COURSE" streams={['B.ED']}/>
       <SortBy/>
     </div>
@@ -55,12 +56,12 @@ const CollegesHome = () => {
     </div>
     
     
-    <div className='grid lg:grid-cols-3 grid-flow-row-dense lg:ml-0 ml-4 lg:mt-12 py-5'>
-      <a href="http://localhost:5173/college/about"><CollegeInfoCard/></a>
-      <a href="http://localhost:5173/college/about"><CollegeInfoCard/></a>
-      <a href="http://localhost:5173/college/about"><CollegeInfoCard/></a>
-      <a href="http://localhost:5173/college/about"><CollegeInfoCard/></a>
-      <a href="http://localhost:5173/college/about"><CollegeInfoCard/></a>
+    <div className='grid lg:grid-cols-3 grid-flow-row-dense lg:ml-14 ml-4 lg:mt-12 py-5'>
+      <NavLink to="/college/about"><CollegeInfoCard/></NavLink>
+      <NavLink to="/college/about"><CollegeInfoCard/></NavLink>
+      <NavLink to="/college/about"><CollegeInfoCard/></NavLink>
+      <NavLink to="/college/about"><CollegeInfoCard/></NavLink>
+      <NavLink to="/college/about"><CollegeInfoCard/></NavLink>
     </div>
    </div>
   </LayoutColleges>

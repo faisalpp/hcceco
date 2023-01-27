@@ -101,6 +101,7 @@ import PreparationTips from "./pages/ExamsInnerPage/PreparationTips";
 import Counsling from "./pages/ExamsInnerPage/Counsling";
 import ParticipatingColleges from "./pages/ExamsInnerPage/ParticipatingColleges";
 import TopRecruiter from "./pages/CoursesInnerPage/TopRecruiter";
+import HomeLatestHiring from "./pages/HomeLatestHiring";
 
 function App() {
   return (  
@@ -233,6 +234,9 @@ function App() {
       <Route path="/messages" element={<HomeMessages/>}/>
       {/* Latest Announcements Page */}
       <Route path="/latest-announcements" element={<HomeLatestAnnouncements/>}/>
+      {/* Latest Hiring Page */}
+      <Route path="/latest-hiring" element={<HomeLatestHiring/>}/>
+      
       {/* Link Request Page */}
       <Route path="/link-request" element={<HomeLinkRequest/>}/>
        {/* Write A Review Page */}
@@ -298,7 +302,7 @@ function App() {
         <Route path="/college/distance-education" element={<DistanceEducation/>}/>
 
         {/* Individual People Post */}
-        <Route path="/jhon/posts" element={<PeoplePosts/>}/>
+        <Route path="/posts/monika" element={<PeoplePosts/>}/>
 
      </Routes>
   )

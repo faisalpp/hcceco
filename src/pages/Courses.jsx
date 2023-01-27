@@ -10,8 +10,12 @@ import SearchBar from '../../components/HomeComponents/SearchBar';
 import NotificationMenu from '../../components/NotificationMenu';
 import { AiOutlineControl } from 'react-icons/ai';
 import MobileFloats from './MobileFloats';
+import { useState } from 'react';
 
 const Courses = () => {
+  
+  const [searchQuery,setSearchQuery] = useState('');
+  
   return (
     <>
     <HeadMeta title="Courses"/>
@@ -21,9 +25,9 @@ const Courses = () => {
     <NotificationMenu/>
     <div className='lg:grid grid-cols-12 w-full'>
       <div className='col-start-1 col-end-4 hidden lg:flex flex-col items-center'>
-        <div className='flex bg-white w-60 mt-10 py-2 rounded-md text-xs px-2'><input type="search" placeholder='Search' className='border-none w-full'/><RiSearch2Line className='text-xl'/></div>
+        <form onSubmit={(event)=>{alert(searchQuery);event.preventDefault();setSearchQuery('')}} className='flex items-center bg-white w-60 mt-10 rounded-md text-xs px-2'><input value={searchQuery} onChange={(e)=>setSearchQuery(e.target.value)} type="search" placeholder='Search' className='border-none w-full outline-none focus:ring-0'/><RiSearch2Line className='text-xl'/></form>
         <div className='flex text-[17px] items-center space-x-10 mt-8'><h3>Found 02 Course</h3><a className='underline text-xs'>Set Default</a></div>
-        <TrendingCoursesMenu/>
+        <TrendingCoursesMenu courses={['B.ED','BSCS','MCAT','MBA','ICS','INTER']}/>
         <ChoseByDreamMenu/>       
       </div>
       <main className='col-start-4 col-end-13 w-full'>
@@ -61,14 +65,12 @@ const Courses = () => {
        </div>
     </div>
 
-
-
        <div className='lg:grid hidden lg:grid-cols-3 grid-flow-row-dense mt-12 ml-10'>
-        <a href="http://localhost:5173/college/about"><CoursesCard/></a>
-        <a href="http://localhost:5173/college/about"><CoursesCard/></a>
-        <a href="http://localhost:5173/college/about"><CoursesCard/></a>
-        <a href="http://localhost:5173/college/about"><CoursesCard/></a>
-        <a href="http://localhost:5173/college/about"><CoursesCard/></a>
+        <CoursesCard courses={['MEDICAL','ENGINEERING','BITECHNOLOGY']}/>
+        <CoursesCard/>
+        <CoursesCard courses={['MEDICAL','ENGINEERING','BITECHNOLOGY']}/>
+        <CoursesCard/>
+        <CoursesCard courses={['MEDICAL','ENGINEERING','BITECHNOLOGY']}/>
        </div>
        <div className='flex flex-col lg:mt-20'>
         <h3 className='lg:flex hidden lg:justify-center text-center text-2xl font-semibold text-t1' >LIST OF POPULAR COURSES IN INDIA</h3>

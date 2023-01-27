@@ -10,12 +10,12 @@ const MockTestResult = () => {
   return (
     <>
     <Navbar/>
-    <div style={{'height':'calc(100vh - 105px)'}} className=' bg-white w-full'>
-      <div className='text-[29px]'><h3 className='text-t1 text-center py-5'>Congratulation! You've completed the test</h3></div>
-      <div className='flex w-full space-x-52 justify-center'>
-      <div className='flex w-[361px] h-[361px] mt-10 ml-20'>
-       <CircularProgressBar crt="80" wrg="50" skp="40"/>
-      </div>
+    <div style={{'height':'calc(100vh - 105px)'}} className='flex flex-col bg-white w-full'>
+      <div className='lg:text-[29px] text-xl'><h3 className='text-t1 text-center py-5'>Congratulation! You've completed the test</h3></div>
+      <div className='flex lg:flex-row flex-col w-full space-x-52 justify-center'>
+       <div className='flex w-[361px] h-[361px] mt-10 lg:ml-20'>
+        <CircularProgressBar crt="80" wrg="50" skp="40"/>
+       </div>
       <div className='flex flex-col'>
          {/*Score Card  */}
         <div className='bg-white shadow-2xl px-10 py-5'>
