@@ -35,19 +35,19 @@ const ExamInnerNavbar = () => {
     <div className='lg:flex hidden w-full bg-t1 lg:justify-end '>
     <div ref={ref} className='flex lg:px-10 px-5 space-x-10 py-2 w-full lg:ml-10 mr-28 lg:rounded-b-md bg-t1 text-white overflow-hidden'>
     <button onClick={()=>scrollLeft()} className='absolute bg-white mt-2 rounded-full left-3'><RiArrowLeftSLine className='text-t1 text-3xl'/></button>
-    <NavLink to="/exam/about/definition"><div className={`  ${title.pathname === "/exam/about" ? 'border-b-4 border-white':'border-t1'} border-b-4 py-2 hover:border-white`}><h3>About</h3></div></NavLink>
+    <NavLink to="/exam/about/definition"><div className={`  ${title.pathname === "/exam/about/definition" ? 'border-b-4 border-white':'border-t1'} border-b-4 py-2 hover:border-white`}><h3>About</h3></div></NavLink>
     <NavLink to="/exam/registration"><div className={`w-max ${title.pathname === "/exam/registration" ? 'border-b-4 border-white':'border-t1'} border-b-4 py-2 hover:border-white`}><h3>Registration</h3></div></NavLink>
     <NavLink to="/exam/admit-card"><div className={` w-max ${title.pathname === "/exam/admit-card" ? 'border-b-4 border-white':'border-t1'} border-b-4 py-2 hover:border-white`}><h3>Admit Card</h3></div></NavLink>
     <NavLink to="/exam/important-dates"><div className={` w-max ${title.pathname === "/exam/important-dates" ? 'border-b-4 border-white':'border-t1'} border-b-4 py-2 hover:border-white`}><h3>Important Dates</h3></div></NavLink>
     <NavLink to="/exam/reservation"><div className={`w-max ${title.pathname === "/exam/reservation" ? 'border-b-4 border-white':'border-t1'} border-b-4 py-2 hover:border-white`}><h3>Reservation</h3></div></NavLink>
     <NavLink to="/exam/exam-center"><div className={`w-max ${title.pathname === "/exam/exam-center" ? 'border-b-4 border-white':'border-t1'} border-b-4 py-2 hover:border-white`}><h3>Exam Centers</h3></div></NavLink>
-    <NavLink to="/exam/eligibility"><div className={` w-max ${title.pathname === "/exam/eligiblity" ? 'border-b-4 border-white':'border-t1'} border-b-4 py-2 hover:border-white`}><h3>Eligibility</h3></div></NavLink>
+    <NavLink to="/exam/eligibility"><div className={` w-max ${title.pathname === "/exam/eligibility" ? 'border-b-4 border-white':'border-t1'} border-b-4 py-2 hover:border-white`}><h3>Eligibility</h3></div></NavLink>
     <NavLink to="/exam/exam-pattern"><div className={`w-max ${title.pathname === "/exam/exam-pattern" ? 'border-b-4 border-white':'border-t1'} border-b-4 py-2 hover:border-white`}><h3>Exam Pattern</h3></div></NavLink>
     <NavLink to="/exam/syllabus"><div className={` w-max ${title.pathname === "/exam/syllabus" ? 'border-b-4 border-white':'border-t1'} border-b-4 py-2 hover:border-white`}><h3>Syllabus</h3></div></NavLink>
-    <NavLink to="/exam/tips"><div className={` w-max ${title.pathname === "/exam/" ? 'border-b-4 border-white':'border-t1'} border-b-4 py-2 hover:border-white`}><h3>Preparation Tips</h3></div></NavLink>
-    <NavLink to="/exam/counsling"><div className={` ${title.pathname === "/exam/" ? 'border-b-4 border-white':'border-t1'} border-b-4 py-2 hover:border-white`}><h3>Counsling</h3></div></NavLink>
+    <NavLink to="/exam/tips"><div className={` w-max ${title.pathname === "/exam/tips" ? 'border-b-4 border-white':'border-t1'} border-b-4 py-2 hover:border-white`}><h3>Preparation Tips</h3></div></NavLink>
+    <NavLink to="/exam/counsling"><div className={` ${title.pathname === "/exam/counsling" ? 'border-b-4 border-white':'border-t1'} border-b-4 py-2 hover:border-white`}><h3>Counsling</h3></div></NavLink>
     <NavLink to="/exam/faq"><div className={` ${title.pathname === "/exam/faq" ? 'border-b-4 border-white':'border-t1'} border-b-4 py-2 hover:border-white`}><h3>FAQs</h3></div></NavLink>
-    <NavLink to="/exam/participating-colleges"><div className={`w-max ${title.pathname === "/exam" ? 'border-b-4 border-white':'border-t1'} border-b-4 py-2 hover:border-white`}><h3>Participating Colleges</h3></div></NavLink>
+    <NavLink to="/exam/participating-colleges"><div className={`w-max ${title.pathname === "/exam/participating-colleges" ? 'border-b-4 border-white':'border-t1'} border-b-4 py-2 hover:border-white`}><h3>Participating Colleges</h3></div></NavLink>
     <button onClick={()=>scrollRight()} className='absolute bg-white mt-2 rounded-full right-10'><RiArrowRightSLine className='text-t1 text-3xl'/></button>
     </div>
     </div>

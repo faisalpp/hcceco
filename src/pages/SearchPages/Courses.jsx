@@ -20,7 +20,7 @@ const Hiring = () => {
        <div className='lg:flex hidden justify-center w-full mt-10 text-3xl text-t1'><h3>Courses</h3></div>
        <SearchNavigation/>
        <h3 className='lg:hidden mt-5 px-5 text-xl text-t1 underline'>Courses</h3>
-       <div className='flex flex-col lg:mt-20 mt-5 items-center space-y-5 mb-10'>
+       <div className='flex flex-col lg:mt-20 mt-5 items-center space-y-5 mb-10 lg:px-5'>
         <PopularCourseCard/>
         <PopularCourseCard/>
         <PopularCourseCard/>

@@ -2,14 +2,12 @@ import React,{useState} from 'react'
 import { RiChat3Line,RiSendPlane2Line, RiTimeFill } from 'react-icons/ri'
 import {TbSend} from 'react-icons/tb'
 import {MdOutlineWavingHand} from 'react-icons/md'
-import {RiArrowLeftSLine,RiArrowRightSLine} from 'react-icons/ri'
 import HomeCardReplay from '../HomeCardReplay'
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
 import UserInfo from './UserInfo'
 import RepostUserInfo from './RepostUserInfo'
+import CardCarousel from './CardCarousel'
 
-const HomeCard = ({post}) => {
+const HomeCard = ({post,width}) => {
   
   const [readMore,setReadMore] = useState(false);
   const [replay,setReplay] = useState(false);
@@ -26,17 +24,8 @@ const HomeCard = ({post}) => {
 
    <div className='lg:bg-b3/20 ml-2 lg:ml-10 lg:mr-10 lg:border-t-0 lg:border-b-0 border-t-2 border-b-2 border-t3/10 mr-2 text-xs lg:text-xs font-medium lg:rounded-sm px-5 py-3'><h3>{post.subject}</h3></div>
    <div className='ml-2 lg:ml-10 mr-3 lg:mr-10 px-5 py-3'><p className={`${readMore?'w-full':'w-full h-8 overflow-hidden'} text-[11px] w-full`}>{post.msg}</p>{readMore ?<span onClick={()=>setReadMore(false)} className='text-green-500 text-[10px] hover:underline cursor-pointer'>Read More</span> :<span onClick={()=>setReadMore(true)} className='text-green-500 text-[10px] hover:underline cursor-pointer'>Read More</span>}</div>
-
-   {/* User Image Carousel */}
-   {post.userImg ? <div className='ml-10 mr-10 mb-2'>
-   <CarouselProvider naturalSlideWidth={170} naturalSlideHeight={80} totalSlides={2} visibleSlides={1} className="relative w-full">
-   <ButtonBack className='absolute cursor-pointer top-28 left-3 mr-3 z-20'><div className='hidden lg:flex bg-t2/50 rounded-full text-white'><RiArrowLeftSLine className='text-2xl'/></div></ButtonBack>
-    <Slider>
-     {post.userImg.map((img,index)=><Slide key={index}><img src={img} className='w-full rounded-md h-[243px]'/></Slide>)}
-    </Slider>
-   <ButtonNext className='absolute cursor-pointer top-28 right-3 mr-3 z-20'><div className='hidden lg:flex bg-t2/50 rounded-full text-white'><RiArrowRightSLine className='text-2xl'/></div></ButtonNext> 
-   </CarouselProvider>
-   </div>:null}
+   {width ?<div className='flex flex-col w-full'><CardCarousel images={post.userImg}/></div>:
+   <div className='flex flex-col items-center w-full'><div className='w-8/12'><CardCarousel images={post.userImg}/></div></div>} 
 
    {/* CARD STATES ICONS */}
    <div className='flex items-center space-x-40 ml-3 lg:ml-10 border-t-2 border-b-2 border-t2/20 lg:mb-10 mb-3 mr-3 lg:mr-10 py-3'>

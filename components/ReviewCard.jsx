@@ -11,7 +11,7 @@ const ReviewCard = () => {
     <div className='flex items-center lg:space-x-3 space-x-2'>
         <img src="https://www.dropbox.com/s/h4an5wsqmuued7z/avtar.PNG?raw=1" className='w-12 h-12 rounded-full'/>
         <div className='flex flex-col'>
-         <div className='flex space-x-32'><h3 className='font-bold lg:text-[16px] text-xs'>Faisal</h3><h3 className='flex lg:text-[16px] text-xs items-center'><RiStarFill className='text-yellow-500'/> <span>3.4/4</span></h3></div> 
+         <div className='flex lg:space-x-80 space-x-32'><h3 className='font-bold lg:text-[16px] text-xs'>Faisal</h3><h3 className='flex lg:text-[16px] text-xs items-center'><RiStarFill className='text-yellow-500'/> <span>3.4/4</span></h3></div> 
          <div className='flex lg:space-x-10 space-x-5 lg:text-sm text-[8px] text-t3'><h3 >Enrolled 2021</h3><h3 className='flex items-center'><FaGraduationCap className='mr-2'/> Bachelor of Science</h3><h3 className='flex items-center'><RiTimeFill className='mr-2'/> July 29 2022</h3></div>
         </div>
       </div>

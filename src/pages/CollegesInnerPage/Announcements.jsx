@@ -1,5 +1,4 @@
-import React from 'react'
-import { useLocation} from 'react-router-dom'
+import React,{useState} from 'react'
 import HeadMeta from '../../HeadMeta'
 import Navbar from '../../../components/Navbar'
 import CollegeInnerPageBanner from '../../../components/CollegesComponents/CollegeInnerPageBanner'
@@ -7,9 +6,18 @@ import Ticker from '../../../components/CollegesComponents/Ticker'
 import CollegeInnerSidebar from '../../../components/CollegesComponents/CollegeInnerSideBar'
 import CollegeNavigation from '../../../components/CollegesComponents/CollegeNavigation'
 import MobileFloats from '../MobileFloats'
-
-
+import HomeCard from '../../../components/HomeComponents/HomeCard/HomeCard';
 const Announcements = () => {
+  
+  const avtar = "https://www.dropbox.com/s/h4an5wsqmuued7z/avtar.PNG?raw=1";
+  const c1 = "https://www.dropbox.com/s/jwilw7rlwh6edaw/kenny-eliason-zFSo6bnZJTw-unsplash.jpg?raw=1";
+  const c2 = "https://www.dropbox.com/s/mtuyw3akr5u0vd3/post_carousel.jpg?raw=1";
+  const lorem = 'Det er et velkjent faktum at lesere distraheres av lesbart innhold på en side når man ser på dens layout. Poenget med å bruke. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure architecto explicabo nemo dolores atque fugit autem sapiente? Corrupti quod consectetur, accusantium unde rem doloribus suscipit maiores, ex commodi porro non?';
+  const [posts,setPosts] = useState([{'userName':'Argha Paul','subject':'What is Scope of BSC?','msg':lorem,'userType':'student','postType':'post','avtar':avtar,'userImg':[c1,c2],timeNow:'2Hrs'},
+  {'userName':'Argha Paul','subject':'New Admission Open!','msg':lorem,userType:'ambassador','postType':'repost','avtar':avtar,'timeNow':'2Hrs','repostUser':{'userName':'Faisal','userType':'student','postType':'question','userImg':'https://www.dropbox.com/s/h4an5wsqmuued7z/avtar.PNG?raw=1','timeNow':'1Hrs'}},
+  {'userName':'Monika','subject':'Assitant Required!','msg':lorem,userType:'principle','postType':'hiring','avtar':avtar,'timeNow':'3Hrs'}
+  ]);
+  
   return (
     <>
     <HeadMeta title="College About"/>
@@ -23,40 +31,10 @@ const Announcements = () => {
       <div className='lg:grid lg:grid-cols-12 flex flex-col'>
        <CollegeInnerSidebar/>
        <div className='lg:col-start-4 lg:col-end-13 flex w-full bg-white lg:px-0 px-5'>
-    
-    <div className='flex flex-col space-y-8 mt-20 lg:ml-10 lg:mr-10 lg:mb-0 mb-5'>
-        {/* Introduction */}
-        <div className='flex flex-col space-y-2'>
-         <h3 className='text-t1 text-xl'>Introduction</h3>
-         <p className='lg:text-[16px] text-sm'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero corrupti harum aperiam quidem explicabo quibusdam similique sunt excepturi ab autem inventore, quis eaque. Incidunt atque illo odio consequatur unde id. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis natus sunt, unde non ab, fuga, tempore distinctio illum doloremque earum sint reiciendis ea aperiam. Porro reiciendis qui nulla ullam laudantium. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem voluptatibus labore vero nemo ex explicabo omnis porro esse autem sint, nesciunt accusantium commodi id itaque vel maiores facilis obcaecati quae!</p>
-        </div>
-        {/* About Test */}
-        <div className='flex flex-col space-y-2'>
-         <h3 className='text-t1 text-xl'>About Test</h3>
-         <p className='lg:text-[16px] text-sm'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero corrupti harum aperiam quidem explicabo quibusdam similique sunt excepturi ab autem inventore, quis eaque. Incidunt atque illo odio consequatur unde id. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure et molestias eos quia eveniet ratione quasi! Facere quibusdam eos reprehenderit aliquid aliquam. Blanditiis ipsa rerum odio, hic porro tenetur eius. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias quisquam illum corporis, porro libero delectus voluptates consequatur praesentium voluptas assumenda sequi magni eveniet perferendis corrupti voluptatum. Incidunt at libero eos.</p>
-        </div>
-        {/* Important Dates */}
-        <div className='flex flex-col space-y-2'>
-         <h3 className='text-t1 text-xl'>Important Dates</h3>
-         <p className='lg:text-[16px] text-sm'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero corrupti harum aperiam quidem explicabo quibusdam similique sunt excepturi ab autem inventore, quis eaque. Incidunt atque illo odio consequatur unde id.</p>
-        </div>
-        {/* Admission Process */}
-        <div className='flex flex-col space-y-2'>
-         <h3 className='text-t1 text-xl'>Admission Process</h3>
-         <p className='lg:text-[16px] text-sm'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero corrupti harum aperiam quidem explicabo quibusdam similique sunt excepturi ab autem inventore, quis eaque. Incidunt atque illo odio consequatur unde id.</p>
-        </div>
-        {/* PHD Admission Process */}
-        <div className='flex flex-col space-y-2'>
-         <h3 className='text-t1 text-xl'>PHD Admission Process</h3>
-         <p className='lg:text-[16px] text-sm'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero corrupti harum aperiam quidem explicabo quibusdam similique sunt excepturi ab autem inventore, quis eaque. Incidunt atque illo odio consequatur unde id.</p>
-        </div>
-        {/* Document Required */}
-        <div className='flex flex-col space-y-2'>
-         <h3 className='text-t1 text-xl'>Document Required</h3>
-         <p className='lg:text-[16px] text-sm'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero corrupti harum aperiam quidem explicabo quibusdam similique sunt excepturi ab autem inventore, quis eaque. Incidunt atque illo odio consequatur unde id.</p>
-        </div>
+    {posts ? <div className='flex flex-col mt-20'>
+    {posts.map((post,index)=><HomeCard key={index} width={false} post={post}/>)}
+    </div>:<div className='flex border-t-2 py-10 w-full justify-center text-xs text-t3'><h3>No posts to show. Create links to start showing posts</h3></div>}
        </div>
-      </div>
      </div>    
      </div>
      </>

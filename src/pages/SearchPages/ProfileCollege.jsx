@@ -22,13 +22,13 @@ const ProfileCollege = () => {
        <div className='lg:flex hidden justify-center w-full mt-10 text-3xl text-t1'><h3>Colleges</h3></div>
        <SearchNavigation/>
        {/* Inner Profiles Navigation */}
-       <div className='flex lg:flex-row flex-col mt-10 items-center lg:space-y-0 space-y-5 lg:space-x-96'>
-        <div className='flex space-x-5 lg:border-b-2 lg:border-t3/10 w-fit lg:ml-10 py-1'>
+       <div className='flex lg:flex-row flex-col mt-10 items-center lg:space-y-0 space-y-5 lg:space-x-96 lg:border-b-2'>
+        <div className='flex space-x-5 w-fit lg:ml-10 py-1'>
          <NavLink to="/search/profiles/all"><h3 className={`${title.pathname === "/search/profiles/all" ? 'lg:bg-white bg-t1 lg:px-0 px-5 lg:py-0 py-2 lg:text-black text-white lg:border-b-4 border-t1':'text-t3 border-2 border-t1 lg:px-0 lg:py-0 px-5 py-2'} lg:border-0 border-2 lg:rounded-none rounded-full border-t1 cursor-pointer`} >All</h3></NavLink>
          <NavLink to="/search/profiles/people"><h3 className={`${title.pathname === "/search/profiles/people" ? 'lg:bg-white bg-t1 lg:px-0 px-5 lg:py-0 py-2 lg:text-black text-white lg:border-b-4 border-t1':'text-t3 border-2 border-t1 lg:px-0 lg:py-0 px-5 py-2'} lg:border-0 border-2 lg:rounded-none rounded-full border-t1 cursor-pointer`} >People</h3></NavLink>
          <NavLink to="/search/profiles/college"><h3 className={`${title.pathname === "/search/profiles/college" ? 'lg:bg-white bg-t1 lg:px-0 px-5 lg:py-0 py-2 lg:text-black text-white lg:border-b-4 border-t1':'text-t3 border-2 border-t1 lg:px-0 lg:py-0 px-5 py-2'} lg:border-0 border-2 lg:rounded-none rounded-full border-t1 cursor-pointer`} >College</h3></NavLink>
         </div>
-        <div><Input icon={<RiSearch2Line/>} label='Search' className='w-52'/></div>
+        <div><Input icon={<RiSearch2Line/>} label='Search' className='w-80'/></div>
        </div> 
 
 

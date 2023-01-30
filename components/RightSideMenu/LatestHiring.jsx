@@ -15,7 +15,7 @@ const LatestHiring = () => {
     <div id="link-card" className='flex flex-col w-full mt-2 space-y-5 mb-5 '>
      
      {/* Annoucement Links Item */}
-     {data.map((item) =><div id="link-item" className='flex items-center'>   
+     {data.map((item,index) =><div key={index} className='flex items-center'>   
       <BsDot className='text-4xl text-t1'/>
       <div className='flex flex-col'>
        <a className='text-sm hover:underline hover:text-blue-200 ease-out delay-100 cursor-pointer truncate overflow-hidden w-52'>{item.title}</a>

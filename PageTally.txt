@@ -1,0 +1,70 @@
+
+All Website Pages Name and Their Status
+
+1.Home Page:
+  -> home-default-1 | OK
+  -> home-default-2 | OK
+  -> home-default | OK
+  -> home-1 | OK
+  -> home-signup | Ok
+  -> home-link requesst | OK
+  -> home-messages(chat box) | OK
+  -> home announcement | OK
+  
+2.Popups
+  1.Desktop Popups
+    ->Navbar Notification Panel | OK
+    ->Navbar Search Bar Panel | OK
+
+3.User Related Pages
+ ->Edit profile Page | OK
+ ->Review Page | OK
+
+4.All Search Result Pages
+ ->All Search Results | OK
+ ->Profile (All,People,College)  | OK
+ ->Posts | OK
+ ->Hiring | OK
+ ->Announcements | OK
+ ->Questions | OK
+ ->Services | OK
+ ->Colleges | OK
+ ->Courses | OK
+ ->Exams | OK
+ ->Corporate (Short Tricks,Work Sheets, Mock Tests, Hcceco Library) | OK
+
+5.Colleges Inner Page
+ ->About Page | OK (sidebar pages not working)
+ ->Courses & Fees | OK (filters not functional)
+ ->Announcement | Ok
+ ->Admission | OK
+ ->Distance Education | OK
+ ->Scholership | OK
+ ->FAQs | OK
+ ->Reviews | OK
+ ->Placements | OK
+
+5.Exams Inner Page
+ ->About | OK
+ ->Registartion | OK
+ ->Admit Card | OK
+ ->Important Dates | OK
+ ->Reservation | OK
+ ->Exam Centers | OK
+ ->Eligibility | OK
+ ->Exam Pattern | OK
+ ->Syllabus | OK
+ ->Preparation Tips | OK
+ ->Counsling | OK
+ ->FAQs | OK
+ ->Participating Colleges | OK
+6.Courses Inner Page
+ ->About Course | OK
+ ->Specialization | OK
+ ->Eligibility | OK
+ ->Course After B.ARCH | OK
+ ->Career After B.ARCH | OK
+ ->Imporatant Exam Books | OK
+ ->Average Fee | OK
+ ->Salary Trends | OK
+ ->Top Recruiters | OK

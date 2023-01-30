@@ -231,7 +231,7 @@ function App() {
          <Route path="/corporate/mocktest/result" element={<MockTestResult/>}/>
 
       {/* Messages Page */}
-      <Route path="/messages" element={<HomeMessages/>}/>
+      {/* <Route path="/messages" element={<HomeMessages/>}/> */}
       {/* Latest Announcements Page */}
       <Route path="/latest-announcements" element={<HomeLatestAnnouncements/>}/>
       {/* Latest Hiring Page */}
