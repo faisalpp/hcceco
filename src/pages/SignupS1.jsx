@@ -7,24 +7,19 @@ import {useForm} from 'react-hook-form';
 import {Input,Textarea} from '@material-tailwind/react'
 import { AiFillEye, AiFillEyeInvisible} from 'react-icons/ai'
 import '@tailwindcss/forms';
+import CustomeSelect from '../../components/CustomeSelect'
 
 const SignupS1 = () => {
-  const {register,handleSubmit,watch,formState:{errors}} = useForm();
+  const {register,handleSubmit,watch,formState:{errors}} = useForm({mode:"onSubmit"});
 
   const onSubmit = data => {console.log(data);}
   const states = ['Andhra Pradesh','Haryana','Madhya Pradesh','Rajasthan','Tripura','Maharashtra','Manipur','Goa','Uttarakhand','Telangana','Karnatka','Bihar','Tamil Nadu','West Bangal','Mizoram','Kerala','Nagaland','Jharkhand','Delhi','Utter Pradesh','Punjab','Gujarat','Odisha','Sikkim','Arunachal Pradesh','Himachal Pradesh','Chhattisgarh','Meghalaya','Jammu & Kashmir']
+  const userTypes = ['Student','College','College Ambassador','School or College Authority','Others']
   const [passEye,setPassEye] = useState(false);
-    const showPass = () =>{
-        document.getElementById(id).type = "text";
-        setPassEye(true);
-       }
-     
-       const hidePass = () =>{
-         document.getElementById(id).type = "password";
-         setPassEye(false);
-       }
-
+  const [rePassEye,setRePassEye] = useState(false);
   const title = useLocation();
+  const [userType,setUserType] = useState('');
+  const [state,setState] = useState('');
 
   return (
     <>
@@ -45,15 +40,11 @@ const SignupS1 = () => {
        {/* User Type Field */}
        <div className='lg:w-1/2 w-80'>
         <h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>User Type</h3>
-        <select style={{'borderColor':errors.user_type && 'red'}} label="User Type" {...register('user_type',{required:true})} className='form-select text-t3 h-10 text-sm border-t3/50 w-full rounded-md'>
-         <option value=''>Select User Type</option>
-         <option value='student'>Student</option>
-         <option value='college'>College</option>
-         <option value='college_ambassador'>College Ambassador</option>
-         <option value='school_or_college_authority'>School or College Authority</option>
-         <option value='others'>Others</option>
-        </select>
-        {errors.user_type && <h3 className='text-red-500 text-sm'>User Type Required</h3>}
+        {/* Dropdown */}
+        <CustomeSelect placeholder="Select User Type" errors={errors.user_type} options={userTypes} state={userType} setState={setUserType}>
+        <input type="hidden" value={userType} {...register('user_type',{required:true})}/>
+        {errors.user_type && <h3 className='text-sm text-red-500'>User Type Required</h3>}
+        </CustomeSelect>        
        </div>
        {/* Name Field */}
        <div className='lg:w-1/2 w-80'>
@@ -88,11 +79,11 @@ const SignupS1 = () => {
       {/* State Field */}
       <div className='lg:w-1/2 w-80'>
        <h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>State</h3>
-       <select style={{'borderColor':errors.state && 'red'}} name="state" {...register('state',{required:true})} className='form-select border-t3/50 text-sm text-t3 h-10 w-full rounded-md'>
-        <option value=''>Select Satate</option>
-        {states.map((state,index)=><option key={index} value={state}>{state}</option>)}
-       </select>
-       {errors.state && <h3 className='text-red-500 text-sm'>State Required</h3>}
+       {/* Dropdown */}
+       <CustomeSelect placeholder="Select State" errors={errors.state} options={states} state={state} setState={setState}>
+       <input type="hidden" value={userType} {...register('state',{required:true})}/>
+       {errors.state && <h3 className='text-sm text-red-500'>State Required</h3>}
+       </CustomeSelect>
       </div>  
      </div>
      {/* From Field Group */}
@@ -146,13 +137,13 @@ const SignupS1 = () => {
      {/* Password Feild */}
      <div className='lg:w-1/2 w-80'>
       <h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Password</h3>
-      <Input id="pass" style={{'borderColor':errors.password && 'red'}} label="Password" {...register('password',{required:true,min:8,pattern:{value:/0-9/}})} name="password" type="password" className='outline-none focus:ring-0 w-full px-5' icon={passEye ? <button type="button" onClick={hidePass}><AiFillEyeInvisible className='text-t1 text-2xl'/></button>:<button type='button' onClick={showPass}><AiFillEye className='text-t1 text-2xl'/></button>}/>
+      <Input id="pass" style={{'borderColor':errors.password && 'red'}} label="Password" {...register('password',{required:true,min:8,pattern:{value:/a-zA-Z0-9/}})} name="password" type="password" className='outline-none focus:ring-0 w-full px-5' icon={passEye ? <button onClick={()=>{document.getElementById('pass').type='password';setPassEye(false)}} type="button"><AiFillEyeInvisible className='text-t1 text-2xl'/></button>:<button onClick={()=>{document.getElementById('pass').type='text';setPassEye(true)}} type='button'><AiFillEye className='text-t1 text-2xl'/></button>}/>
       {errors.password && <h3 className='text-red-500 text-sm'>Password Required</h3>}
      </div>
      {/* Re Password Field */}
      <div className='lg:w-1/2 w-80'>
       <h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Re-Type Password</h3>
-      <Input style={{'borderColor':errors.confirm_password && 'red'}} id="repass" name="confirm_password" {...register('confirm_password',{required:true})} label="Retype Password" type="password" className='outline-none focus:ring-0 w-full px-5' icon={passEye ? <button type="button" onClick={hidePass}><AiFillEyeInvisible className='text-t1 text-2xl'/></button>:<button type='button' onClick={showPass}><AiFillEye className='text-t1 text-2xl'/></button>}/>
+      <Input id="repass" style={{'borderColor':errors.confirm_password && 'red'}} name="confirm_password" {...register('confirm_password',{required:true})} label="Retype Password" type="password" className='outline-none focus:ring-0 w-full px-5' icon={rePassEye ? <button onClick={()=>{document.getElementById('repass').type='password';setRePassEye(false)}} type="button"><AiFillEyeInvisible className='text-t1 text-2xl'/></button>:<button onClick={()=>{document.getElementById('repass').type='text';setRePassEye(true)}} type='button'><AiFillEye className='text-t1 text-2xl'/></button>}/>
       { watch('password') === watch('confirm_password') ? null :<h3 className='text-red-500 text-sm'>Confirm Password Not Matched</h3>}
      </div>
     </div>

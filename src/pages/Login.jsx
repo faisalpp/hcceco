@@ -3,8 +3,10 @@ import Desclaimer from '../../components/Desclaimer'
 import { AppContext } from '../../context/GlobalContext'
 import HeadMeta from '../HeadMeta'
 import { Select,Option } from '@material-tailwind/react'
+import { useForm } from 'react-hook-form'
 
 const Login = () => {
+  const {register,handleSubmit,watch,formState:{errors}} = useForm({mode:"onSubmit"});
   const state = useContext(AppContext);
   const [email,setEmail] = useState('');
   const [password,setPassword] = useState('');
@@ -28,13 +30,7 @@ const Login = () => {
        <form className='flex flex-col space-y-10 bg-white w-[474px] h-auto mb-5 shadow-lg px-10 py-20'>
         <input name="email" value={email} onChange={(e)=>setEmail(e.target.value)} type="text" placeholder='Enter Email' className='w-full h-fit outline-none border-2 border-b3 px-5 py-3 rounded-md'/> 
         <input name="password" value={password} onChange={(e)=>setPassword(e.target.value)} type="text" placeholder='Enter Password' className='w-full h-fit outline-none border-2 border-b3 px-5 py-3 rounded-md'/> 
-        <Select name="loginType" label='Select Login Type' size='lg' value={loginType} onChange={(e)=>setLoginType(e.target.value)}>
-         <Option value='student'>Student</Option>
-         <Option value='college'>College</Option>
-         <Option value='campus_ambassadors'>Campus Ambassadors</Option>
-         <Option value='school_or_college_aythorities'>School or College authorities</Option>
-         <Option value='other'>Others</Option>
-        </Select> 
+         
         <a className='ml-60 text-t1 underline'>Forgot Password</a>
         <button type="button" onClick={()=>state.setDsclState(true)} className='text-white py-5 rounded-md bg-b1'>Login</button>
         <p className='text-center'>Don't have an account?<span className='text-t1 underline'> Create Account</span></p>

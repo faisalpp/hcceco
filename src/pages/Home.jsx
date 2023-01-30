@@ -5,7 +5,7 @@ import PostEvent from '../../components/HomeComponents/PostEvent';
 import SuggestedLinks from '../../components/HomeComponents/SuggestedLinks';
 import SearchBar from '../../components/SearchBar';
 import Layout from './Layouts/Layout';
-import MobilePopups from './MobileFloats';
+import MobileFloats from './MobileFloats';
 
 const Home = () => {
   const avtar = "https://www.dropbox.com/s/h4an5wsqmuued7z/avtar.PNG?raw=1";
@@ -16,12 +16,15 @@ const Home = () => {
   {'userName':'Argha Paul','subject':'New Admission Open!','msg':lorem,userType:'ambassador','postType':'repost','avtar':avtar,'timeNow':'2Hrs','repostUser':{'userName':'Faisal','userType':'student','postType':'question','userImg':'https://www.dropbox.com/s/h4an5wsqmuued7z/avtar.PNG?raw=1','timeNow':'1Hrs'}},
   {'userName':'Monika','subject':'Assitant Required!','msg':lorem,userType:'principle','postType':'hiring','avtar':avtar,'timeNow':'3Hrs'}
   ]);
+
+  const [events,setEvents] = useState([{'eventNum':'1','img':avtar,'name':'faisal'},{'eventNum':'2','img':avtar,'name':'monika'},{'eventNum':'3','img':avtar,'name':'Argha Paul'},,{'eventNum':'4','img':avtar,'name':'Argha Paul'}])
+
   return (
     <Layout>
-    <MobilePopups/>
+    <MobileFloats/>
     <div className='flex flex-col space-y-5 ml-5 mr-5'>
     <SearchBar/>
-    <PostEvent/>
+    <PostEvent events={events}/>
     <CommentBox/>
     </div>
     <SuggestedLinks/>

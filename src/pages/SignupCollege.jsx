@@ -5,59 +5,23 @@ import {Select,Option,Input} from '@material-tailwind/react'
 import { useLocation } from 'react-router-dom'
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 import MobileFloats from './MobileFloats'
+import {useForm} from 'react-hook-form'
+import CustomeSelect from '../../components/CustomeSelect'
 
 const SignupCollege = () => {
-
-  const [userType,setUserType] = useState('');
-  const [email,setEmail] = useState('');
-  const [mobileNo,setMobileNo] = useState('');
-  const [state,setState] = useState('');
-  const [city,setCity] = useState('');
-  const [website,setWebsite] = useState('');
-  const [college,setCollege] = useState('');
-
-  const [password,setPassword] = useState('');
-  const [rePass,setRePass] = useState('');
-
-  const [reEye,setReEye] = useState(false);
+  const {register,watch,handleSubmit,formState:{errors}} = useForm({mode:"onSubmit"});
+  const userTypes = ['Student','College','College Ambassador','School or College Authority','Others']
+  const states = ['Andhra Pradesh','Haryana','Madhya Pradesh','Rajasthan','Tripura','Maharashtra','Manipur','Goa','Uttarakhand','Telangana','Karnatka','Bihar','Tamil Nadu','West Bangal','Mizoram','Kerala','Nagaland','Jharkhand','Delhi','Utter Pradesh','Punjab','Gujarat','Odisha','Sikkim','Arunachal Pradesh','Himachal Pradesh','Chhattisgarh','Meghalaya','Jammu & Kashmir']
+  const [rePassEye,setRePassEye] = useState(false);
   const [passEye,setPassEye] = useState(false);
 
-  
-  const handleUserType = (value) =>{
-    setUserType(value)
-  }
-
-  const handleState = (value) =>{
-    setState(value)
-  }
-  const handleCity = (value) =>{
-    setCity(value)
-  }
-  const handleCollege = (value) =>{
-    setCollege(value)
-  }
-
-  const showPass = () =>{
-   document.getElementById('pass').type = "text";
-   setPassEye(true);
-  }
-
-  const hidePass = () =>{
-    document.getElementById('pass').type = "password";
-    setPassEye(false);
-  }
-
-  const showRePass = () =>{
-   document.getElementById('repass').type = "text";
-   setReEye(true);
-  }
-
-  const hideRePass = () =>{
-    document.getElementById('repass').type = "password";
-    setReEye(false)
-  }
-
   const title = useLocation();
+  const {userType,setUserType} = useState('');
+  const {state,setState} = useState('');
+  const {city,setCity} = useState('');
+  const {college,setCollege} = useState('');
+
+  const onSubmit = (value) => console.log(value)
 
   return (
     <>
@@ -73,30 +37,68 @@ const SignupCollege = () => {
        <div className={`lg:border-b-[7px] border-b-4 ${ title.pathname === "/signup/college/step1" ?'border-t1':'border-white'} py-5 lg:px-28`}><h3 className='lg:text-2xl text-lg'>Step 1</h3></div><div className={`lg:border-b-[7px] border-b-4 ${title.pathname === "/signup/college/step2" ?'border-t1':'border-white'} py-5 lg:px-28`}><h3 className='lg:text-2xl text-lg'>Step 2</h3></div>
       </div>
       
-      <form form="#" method='post' className='flex flex-col lg:w-2/3 space-y-10 mt-10 h-auto justify-center '>
-       <div className='flex lg:flex-row space-y-10 items-center flex-col lg:w-full lg:space-x-10'>
-        <div className=' lg:w-1/2 w-80'><h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Select User Type</h3><Select label='User Type' name="userType" value={userType} onChange={handleUserType} className='h-14 w-full rounded-md'><Option>Student</Option></Select></div>
-        <div className='lg:w-1/2 w-80'><h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Email</h3><Input name="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="Enter Email" type="email" className='h-14 w-full focus:ring-0 rounded-md border-2 border-t3/30 px-5'/></div>
+      <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col lg:w-2/3 space-y-10 mt-10 h-auto justify-center '>
+       <div className='flex lg:flex-row lg:space-y-0 space-y-10 items-center flex-col lg:w-full lg:space-x-10'>
+        <div className=' lg:w-1/2 w-80'>
+          <h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Select User Type</h3>
+          <CustomeSelect errors={errors.user_type} options={userTypes} placeholder="Select User Type" state={userType} setState={setUserType}>
+           <input type="hidden" value={userType} {...register('user_type',{required:true})}/>
+           {errors.user_type && <h3 className='text-sm text-red-500'>User Type Required</h3>}
+          </CustomeSelect>
+        </div>
+        <div className='lg:w-1/2 w-80'>
+         <h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Name</h3>
+         <Input name="name" label="Name" {...register('name',{required:true})} type="text" style={{'borderColor':errors.name && 'red'}} className='lg:h-10 h-12 w-full rounded-md !outline-none focus:ring-0 px-5'/>
+         {errors.name && <h3 className='text-red-500 text-sm'>Name is Required</h3>}
+        </div>
        </div>
        <div className='flex lg:flex-row space-y-10 lg:space-y-0 flex-col w-full lg:space-x-10 items-center'>
-        <div className='lg:w-1/2 w-80'><h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Mobile Number</h3><Input name="mobileNo" value={mobileNo} onChange={e=>setMobileNo(e.target.value)} type="text" placeholder='Designation' className='form-input lg:h-14 focus:ring-0 w-full rounded-md border-2 border-t3/30 px-5' /></div>
-        <div className='lg:w-1/2 w-80'><h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>State</h3><Select label='State' name="state" value={state} onChange={handleState} className='lg:h-14 w-full rounded-md px-5'><Option>Tamil Nadu</Option></Select></div>
+        <div className='lg:w-1/2 w-80'>
+         <h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Mobile Number</h3>
+         <Input name="mobileNo" {...register('mobile_no',{required:true})} type="text" placeholder='Mobile No' className='lg:h-10 h-12 w-full rounded-md !outline-none focus:ring-0 px-5' />
+         {errors.mobile_no && <h3 className='text-red-500 text-sm'>Mobile No Required</h3>}
+        </div>
+        <div className='lg:w-1/2 w-80'>
+          <h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>State</h3>
+          <CustomeSelect errors={errors.state} options={states} placeholder="Select State" state={state} setState={setState}>
+           <input type="hidden" value={state} {...register('state',{required:true})}/>
+           {errors.state && <h3 className='text-sm text-red-500'>State Required</h3>}
+          </CustomeSelect>
+        </div>
        </div>
        <div className='flex lg:flex-row space-y-10 lg:space-y-0 flex-col w-full lg:space-x-10 items-center'>
-        <div className='lg:w-1/2 w-80'><h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>City</h3><Select label='City' name="state" value={city} onChange={handleCity} className='lg:h-14 w-full rounded-md px-5'><Option>Delhi</Option></Select></div>
-        <div className='lg:w-1/2 w-80'><h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>College Website</h3><Input name="website" type="text" placeholder='College Website' value={website} onChange={e=>setWebsite(e.target.value)} className='lg:h-14 w-full rounded-md focus:ring-0 border-2 border-t3/30 px-5'/></div>
+        <div className='lg:w-1/2 w-80'>
+          <h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>City</h3>
+          <CustomeSelect errors={errors.city} options={['Kolkata','Mumbai']} placeholder="Select City Type" state={city} setState={setCity}>
+           <input type="hidden" value={city} {...register('city',{required:true})}/>
+           {errors.city && <h3 className='text-sm text-red-500'>City Required</h3>}
+          </CustomeSelect>
+        </div>
+        <div className='lg:w-1/2 w-80'>
+         <h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>College Website</h3>
+         <Input name="website" {...register('website',{required:true})} type="text" placeholder='Website' className='lg:h-10 h-12 w-full rounded-md !outline-none focus:ring-0 px-5' />
+         {errors.website && <h3 className='text-red-500 text-sm'>Website Required</h3>}
+        </div>
        </div>
        <div className='flex lg:flex-row space-y-10 lg:space-y-0 flex-col w-full lg:space-x-10 items-center'>
-        <div className='lg:w-full w-80'><h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>College</h3><Select label='College Name' name="college" value={college} onChange={handleCollege} className='lg:h-14 w-full rounded-md px-5'><Option>Lyalpur Institute of Science</Option></Select></div>
+        <div className='lg:w-full w-80'>
+          <h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>College</h3>
+          <CustomeSelect errors={errors.college} options={['Lyalpur Institute of Science']} placeholder="Select College" state={college} setState={setCollege}>
+           <input type="hidden" value={college} {...register('college',{required:true})}/>
+           {errors.college && <h3 className='text-sm text-red-500'>College Required</h3>}
+          </CustomeSelect>
+        </div>
        </div>
        <div className='flex lg:flex-row space-y-10 lg:space-y-0 flex-col w-full lg:space-x-10 items-center'>
         <div className='lg:w-1/2 w-80'>
           <h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Password</h3>
-          <Input label='Password' id="pass" name="password" type="password" icon={passEye ? <button type="button" onClick={hidePass}><AiFillEyeInvisible className='text-t1 text-3xl mr-2'/></button>:<button type='button' onClick={showPass}><AiFillEye className='text-t1 text-3xl mr-2'/></button>} value={password} onChange={e=>setPassword(e.target.value)} className='h-14 focus:ring-0 w-full px-5' />
+          <Input id="pass" style={{'borderColor':errors.password && 'red'}} label="Password" {...register('password',{required:true,min:8,pattern:{value:/a-zA-Z0-9/}})} name="password" type="password" className='outline-none focus:ring-0 w-full px-5' icon={passEye ? <button onClick={()=>{document.getElementById('pass').type='password';setPassEye(false)}} type="button"><AiFillEyeInvisible className='text-t1 text-2xl'/></button>:<button onClick={()=>{document.getElementById('pass').type='text';setPassEye(true)}} type='button'><AiFillEye className='text-t1 text-2xl'/></button>}/>
+          {errors.password && <h3 className='text-red-500 text-sm'>Password Required</h3>} 
         </div>
         <div className='lg:w-1/2 w-80'>
           <h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Re-Enter Password</h3>
-          <Input label='ReType Password' icon={reEye ? <button type="button" onClick={hideRePass}><AiFillEyeInvisible className='text-t1 text-3xl mr-2'/></button>:<button type='button' onClick={showRePass}><AiFillEye className='text-t1 text-3xl mr-2'/></button>} id="repass" name="repass" type="password" value={rePass} onChange={e=>setRePass(e.target.value)} className='h-14 focus:ring-0 w-full px-5'/>
+          <Input id="repass" style={{'borderColor':errors.confirm_password && 'red'}} name="confirm_password" {...register('confirm_password',{required:true})} label="Retype Password" type="password" className='outline-none focus:ring-0 w-full px-5' icon={rePassEye ? <button onClick={()=>{document.getElementById('repass').type='password';setRePassEye(false)}} type="button"><AiFillEyeInvisible className='text-t1 text-2xl'/></button>:<button onClick={()=>{document.getElementById('repass').type='text';setRePassEye(true)}} type='button'><AiFillEye className='text-t1 text-2xl'/></button>}/>
+          { watch('password') === watch('confirm_password') ? null :<h3 className='text-red-500 text-sm'>Confirm Password Not Matched</h3>}
         </div>
        </div>
        <div>
