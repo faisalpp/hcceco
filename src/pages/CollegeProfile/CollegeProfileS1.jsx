@@ -5,15 +5,12 @@ import HeadMeta from '../../HeadMeta';
 import CollegeProfileNavbar from '../../../components/CollegesComponents/CollegeProfileNavbar'
 import { Input } from '@material-tailwind/react';
 import MobileFloats from '../MobileFloats';
+import { useForm } from 'react-hook-form';
 
 const CollegeProfileS1 = () => {
-
-  const [clgWebsite,setClgWebsite] = useState('');
-  const [designation,setDesignation] = useState('');
-  const [email,setEmail] = useState('');
-  const [password,setPassword] = useState('');
-  const [mobileNo,setMobileNo] = useState('');
-
+  const {register,handleSubmit,watch,formState:{errors}} = useForm({mode:"onSubmit"});
+  const onSubmit = data => console.log(data);
+ 
   return (
     <>
      <HeadMeta title="Edite Profile"/>
@@ -37,20 +34,40 @@ const CollegeProfileS1 = () => {
       </div>
 
       {/* Form */}
-      <form className='flex flex-col space-y-10 mb-20 w-full h-full mt-20 items-center'>
+      <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-10 mb-20 w-full h-full mt-20 items-center'>
        {/* Form Input Group */}
        <div className='flex lg:flex-row space-y-10 lg:space-y-0 flex-col w-full lg:space-x-10 items-center'>
-        <div className='lg:w-1/2 w-80'><h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Designation</h3><Input label='Designation' placeholder='Designation' value={designation} onChange={e=>setDesignation(e.target.value)} name="designation" type="text" className='focus:ring-0 border-2 border-t3/30 w-full lg:h-14 rounded-md px-5'/></div>
-        <div className='lg:w-1/2 w-80'><h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Email</h3><Input label='Email' placeholder='Email' value={email} onChange={e=>setEmail(e.target.value)} name="designation" type="text" className='lg:h-14 w-full focus:ring-0 rounded-md border-2 border-t3/30 px-5'/></div>
+        <div className='lg:w-1/2 w-80'>
+         <h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Designation</h3>
+         <Input style={{'borderColor':errors.designation && 'red'}} label='Designation' {...register('designation',{required:true})} type="text" className='focus:ring-0 border-2 border-t3/30 w-full lg:h-12 rounded-md px-5'/>
+         {errors.designation && <h3 className='text-sm text-red-500'>Designation Required</h3>}
+        </div>
+        <div className='lg:w-1/2 w-80'>
+          <h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Email</h3>
+          <Input style={{'borderColor':errors.email && 'red'}} label='Email' {...register('email',{required:true})} name="designation" type="text" className='lg:h-12 w-full focus:ring-0 rounded-md border-2 border-t3/30 px-5'/>
+          {errors.email && <h3 className='text-sm text-red-500'>Email Required</h3>}
+        </div>
        </div>  
        {/* Form Input Group */}
        <div className='flex lg:flex-row space-y-10 lg:space-y-0 flex-col w-full lg:space-x-10 items-center'>
-        <div className='lg:w-1/2 w-80'><h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Password</h3><Input label='Paswword' placeholder='Password' value={password} onChange={e=>setPassword(e.target.value)} name="password" type="text" className='focus:ring-0 border-2 border-t3/30 w-full lg:h-14 rounded-md px-5'/></div>
-        <div className='lg:w-1/2 w-80'><h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Mobile Number</h3><Input label='Mobile Number' placeholder='012344567' value={mobileNo} onChange={e=>setMobileNo(e.target.value)} name="mobileNo" type="text" className='focus:ring-0 lg:h-14 w-full rounded-md border-2 border-t3/30 px-5'/></div>
+        <div className='lg:w-1/2 w-80'>
+          <h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Password</h3>
+          <Input style={{'borderColor':errors.password && 'red'}} label='Paswword' {...register('password',{required:true})} name="password" type="text" className='focus:ring-0 border-2 border-t3/30 w-full lg:h-12 rounded-md px-5'/>
+          {errors.password && <h3 className='text-sm text-red-500'>Password Required</h3>}
+        </div>
+        <div className='lg:w-1/2 w-80'>
+          <h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Mobile Number</h3>
+          <Input style={{'borderColor':errors.mobile_no && 'red'}} label='Mobile Number' {...register('mobile_no',{required:true})} name="mobileNo" type="text" className='focus:ring-0 lg:h-12 w-full rounded-md border-2 border-t3/30 px-5'/>
+          {errors.mobile_no && <h3 className='text-sm text-red-500'>Mobile No Required</h3>}
+        </div>
        </div>  
        {/* Form Input Group */}
        <div className='flex lg:flex-row space-y-10 lg:space-y-0 flex-col w-full lg:space-x-10 items-center'>
-        <div className='lg:w-1/2 w-80'><h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>College Website</h3><Input label='College Website' placeholder='Enter College Website' value={clgWebsite} onChange={e=>setClgWebsite(e.target.value)} name="collegeWeb" type="text" className='focus:ring-0 border-2 border-t3/30 w-full lg:h-14 rounded-md px-5'/></div>
+        <div className='lg:w-1/2 w-80'>
+          <h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>College Website</h3>
+          <Input style={{'borderColor':errors.website && 'red'}} label='College Website' {...register('website',{required:true})} name="collegeWeb" type="text" className='focus:ring-0 border-2 border-t3/30 w-full lg:h-12 rounded-md px-5'/>
+          {errors.website && <h3 className='text-sm text-red-500'>College Website Required</h3>}
+        </div>
        </div>  
        {/* Form Buttons */}
        <div className='flex w-full h-fit justify-center space-x-5 lg:space-x-10 items-center'>

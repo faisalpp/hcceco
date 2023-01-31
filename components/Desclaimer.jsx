@@ -1,17 +1,8 @@
-import React, { useContext, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import React, { useContext} from 'react'
 import { AppContext } from '../context/GlobalContext'
 
-const Desclaimer = ({email,password,loginType}) => {
+const Desclaimer = () => {
   const state = useContext(AppContext);
-  const navigation = useNavigate();
-
-  // Login Details are authenticated here
-  const login = () =>{
-    state.setDsclState(false);
-    state.setIsLogin(true);
-    navigation('/');
-  }
 
   return (
     <>
@@ -26,7 +17,7 @@ const Desclaimer = ({email,password,loginType}) => {
         </div>
         <div className='flex space-x-10 mt-12 justify-center w-full'>
             <button onClick={()=>state.setDsclState(false)} className='bg-b2 text-t1 px-5 py-2 rounded-sm'>Decline</button>
-            <button onClick={()=>login()} type="submit" className='bg-b1 text-white px-5 py-2 rounded-sm'>I Accept</button>
+            <button onClick={()=>{state.setDsclState(false)}} className='bg-b1 text-white px-5 py-2 rounded-sm'>I Accept</button>
         </div>
       </div>
     

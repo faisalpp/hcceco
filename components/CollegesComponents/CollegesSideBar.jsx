@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { RiSearch2Line } from 'react-icons/ri'
+import FilterSideBar from './FilterSideBar'
 import SideBarCard from './SideBarCard'
 
 const CollegesSideBar = ({numberOfColleges}) => {
@@ -13,6 +14,7 @@ const CollegesSideBar = ({numberOfColleges}) => {
      <div className='flex flex-col mt-5'>
         <div className='flex items-center space-x-10'><h3>Found {numberOfColleges} Colleges</h3><a className='text-xs mt-1 underline text-t2'>Set Default</a></div>
      </div>
+     <FilterSideBar/>
      <SideBarCard title="STATE" cardColor="green" searchAction="/" optionAction="/" />
      <SideBarCard title="CITY" cardColor="orange" searchAction="/" optionAction="/"/>
      <SideBarCard title="STREM" cardColor="red" searchAction="/" optionAction="/"/>

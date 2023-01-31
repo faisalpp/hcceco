@@ -6,6 +6,7 @@ import SearchBar from '../../../components/HomeComponents/SearchBar'
 import ShareCollege from '../../../components/CollegesComponents/ShareCollege'
 import HeadMeta from '../../HeadMeta'
 import MobFilterMenu from '../../../components/MobileComponents/FilterMenu'
+import FilterSideBar from '../../../components/CollegesComponents/FilterSideBar'
 
 const LayoutColleges = ({children}) => {
   return (
@@ -25,7 +26,9 @@ const LayoutColleges = ({children}) => {
         <SearchBar/>
 
      <div className='lg:grid lg:grid-cols-12 w-full'>
-      <div className='col-start-1 col-end-4 lg:flex hidden w-full'><CollegesSideBar /></div>
+      <div className='col-start-1 col-end-4 lg:flex hidden w-full'>
+       <CollegesSideBar />
+      </div>
       <main className='col-start-4 col-end-13 w-full'>{children}</main>
      </div>
     </>

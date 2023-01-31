@@ -48,14 +48,14 @@ const SignupCollege = () => {
         </div>
         <div className='lg:w-1/2 w-80'>
          <h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Name</h3>
-         <Input name="name" label="Name" {...register('name',{required:true})} type="text" style={{'borderColor':errors.name && 'red'}} className='lg:h-10 h-12 w-full rounded-md !outline-none focus:ring-0 px-5'/>
+         <Input  name="name" label="Name" {...register('name',{required:true})} type="text" style={{'borderColor':errors.name && 'red'}} className='lg:h-10 h-12 w-full rounded-md !outline-none focus:ring-0 px-5'/>
          {errors.name && <h3 className='text-red-500 text-sm'>Name is Required</h3>}
         </div>
        </div>
        <div className='flex lg:flex-row space-y-10 lg:space-y-0 flex-col w-full lg:space-x-10 items-center'>
         <div className='lg:w-1/2 w-80'>
          <h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>Mobile Number</h3>
-         <Input name="mobileNo" {...register('mobile_no',{required:true})} type="text" placeholder='Mobile No' className='lg:h-10 h-12 w-full rounded-md !outline-none focus:ring-0 px-5' />
+         <Input style={{'borderColor':errors.mobile_no && 'red'}} name="mobileNo" {...register('mobile_no',{required:true})} type="text" placeholder='Mobile No' className='lg:h-10 h-12 w-full rounded-md !outline-none focus:ring-0 px-5' />
          {errors.mobile_no && <h3 className='text-red-500 text-sm'>Mobile No Required</h3>}
         </div>
         <div className='lg:w-1/2 w-80'>
@@ -76,7 +76,7 @@ const SignupCollege = () => {
         </div>
         <div className='lg:w-1/2 w-80'>
          <h3 className='hidden lg:flex text-t1 ml-5 font-semibold mb-2'>College Website</h3>
-         <Input name="website" {...register('website',{required:true})} type="text" placeholder='Website' className='lg:h-10 h-12 w-full rounded-md !outline-none focus:ring-0 px-5' />
+         <Input style={{'borderColor':errors.website && 'red'}} name="website" {...register('website',{required:true})} type="text" placeholder='Website' className='lg:h-10 h-12 w-full rounded-md !outline-none focus:ring-0 px-5' />
          {errors.website && <h3 className='text-red-500 text-sm'>Website Required</h3>}
         </div>
        </div>

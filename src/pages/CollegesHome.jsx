@@ -11,15 +11,16 @@ import { NavLink } from 'react-router-dom'
 
 const CollegesHome = () => {
   const state = useContext(AppContext)
+  const streams = ['Engineering','BA','BSCS'];
   return (
     <LayoutColleges>  
    <div className='w-full bg-white h-fit'>
     
-    {/* Desktop Filters */}
+    {/* Deskto Filters */}
     <div className='hidden lg:flex flex-col items-center'>
       <div className='mt-10'><h3 className='text-t1 text-2xl font-semibold'>LIST TOP COLLEGES IN INDIA BASED ON 2022 BANKING</h3></div>
-      <SearchFilter filterName="COLLEGE" streams={['Engineering','Engineering','Engineering','Engineering','Engineering','Engineering','Engineering','Engineering','Engineering',]}/>
-      <SearchFilter filterName="COURSE" streams={['B.ED']}/>
+      <SearchFilter filterName="COLLEGE" streams={streams}/>
+      {/* <SearchFilter filterName="COURSE" streams={['B.ED']}/> */}
       <SortBy/>
     </div>
 

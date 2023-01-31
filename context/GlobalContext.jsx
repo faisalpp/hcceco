@@ -19,6 +19,8 @@ const AppProvider = ({children}) => {
     const [chtState,setChtState] = useState(true)
     // 
     const [share,setShare] = useState(false)
+    // College Home Filter Array
+    const [filter,setFilter] = useState([])
 
     // Mobile States
     // Mobile Navbar Menu Trigger
@@ -43,7 +45,7 @@ const AppProvider = ({children}) => {
     const [blockPopup,setBlockPopup] = useState(false);
 
 
-    return <AppContext.Provider value={{blockPopup,setBlockPopup,signupPopup,setSignupPopup,emailPopup,setEmailPopup,loginPopup,setLoginPopup,logoutPopup,setLogoutPopup,mobNtf,setMobNtf,mobMsg,setMobMsg,exmFilter,setExmFilter,clgFilter,setClgFilter,share,setShare,userMobMenu,setUserMobMenu,chtState,setChtState,msgState,setMsgState,isLogin,setIsLogin,ntfState,setNtfState,dsclState,setDsclState,homeSearch,setHomeSearch,ntfMsg,setNtfMsg}}>{children}</AppContext.Provider>
+    return <AppContext.Provider value={{filter,setFilter,blockPopup,setBlockPopup,signupPopup,setSignupPopup,emailPopup,setEmailPopup,loginPopup,setLoginPopup,logoutPopup,setLogoutPopup,mobNtf,setMobNtf,mobMsg,setMobMsg,exmFilter,setExmFilter,clgFilter,setClgFilter,share,setShare,userMobMenu,setUserMobMenu,chtState,setChtState,msgState,setMsgState,isLogin,setIsLogin,ntfState,setNtfState,dsclState,setDsclState,homeSearch,setHomeSearch,ntfMsg,setNtfMsg}}>{children}</AppContext.Provider>
 };
 
 export {AppContext,AppProvider}
