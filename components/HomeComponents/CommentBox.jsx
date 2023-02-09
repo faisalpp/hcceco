@@ -25,7 +25,7 @@ const CommentBox = () => {
   }
 
   return (
-    <div className='flex shadow-xl flex-col lg:border-2 lg:border-t3/20 rounded-md px-3 lg:px-10 py-3'>
+    <div className='flex lg:shadow-xl shadow-lg flex-col lg:border-2 lg:border-t3/20 rounded-md px-3 lg:px-10 py-3'>
      <div className='flex lg:flex-row flex-col items-center'>
       <form onSubmit={(event)=>{alert(msg);event.preventDefault();setMsg('')}} className='flex items-center w-full'>
       <img src="https://www.dropbox.com/s/h4an5wsqmuued7z/avtar.PNG?raw=1" className='w-9 h-8 rounded-full'/>

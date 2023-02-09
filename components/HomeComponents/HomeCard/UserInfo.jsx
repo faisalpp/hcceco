@@ -50,7 +50,7 @@ const UserInfo = ({userType,postType,userImg,timeNow,userName}) => {
       </div>
      </div>
     </div>
-     <div className='absolute lg:right-10 top-8 right-5'>
+     <div className='absolute lg:right-10 top-8 right-2'>
      <RxDotsVertical onClick={()=>setCardMenu(true)} className='hover:text-t1 text-xl cursor-pointer'/>
      <div onMouseLeave={()=>setCardMenu(false)} className={`${cardMenu ?'absolute' :'hidden'} lg:right-0 right-0 w-fit h-fit shadow-xl bg-white px-5 py-3`}><div className='flex flex-col space-y-1 mt-2'><a className='cursor-pointer hover:underline text-xs'>Delete</a><a className='cursor-pointer hover:underline text-xs'>Report</a></div></div> 
      </div>  

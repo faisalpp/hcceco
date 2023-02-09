@@ -17,7 +17,7 @@ const Layout = ({children}) => {
     <Navbar/>
      <NotificationMenu/>
      <SearchBar/>
-     <main className='grid lg:grid-cols-12 grid-flow-row-dense mt-2'>
+     <main className='grid lg:grid-cols-12 grid-flow-row-dense mt-2 lg:bg-b4 bg-white'>
      <div className='col-start-1 col-end-4 flex flex-col w-full items-center py-10 space-y-5'>
         <StudyGoals/>
         <LearningLinks/>

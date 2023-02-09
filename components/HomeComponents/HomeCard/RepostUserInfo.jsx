@@ -25,8 +25,8 @@ const RepostUserInfo = ({userType,postType,userImg,timeNow,userName}) => {
       <div className='flex items-center space-x-5 ml-3 text-[9px] lg:text-[10px] text-t2'>
       {userType === 'principle' ? <><h3 className='flex'><GiLaurelCrown className='mr-1 text-sm'/> Principle | Lyalpur college of Technology</h3></>:null}
       {userType === 'student' ? <><h3 className='flex'><FaUserGraduate className='mr-1 text-sm'/> Student | Lyalpur college of Technology</h3></>:null}
-      {userType === 'college' ? <><h3 className='flex'><GiGraduateCap  className='mr-1'/> College | Chandigar | Punjab</h3></>:null}
-      {userType === 'ambassador' ? <><h3 className='flex'><FaUserTie  className='mr-1'/> Campus Ambassador | Lyalpur college of Technology</h3></>:null}
+      {userType === 'college' ? <><h3 className='flex'><GiGraduateCap  className='text-sm mr-1'/> College | Chandigar | Punjab</h3></>:null}
+      {userType === 'ambassador' ? <><h3 className='flex'><FaUserTie  className='text-sm mr-1'/> Campus Ambassador | Lyalpur college of Technology</h3></>:null}
       </div>
      </div>
     </div>

@@ -6,8 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Loading</title>
   </head>
-  <body>
+  <body class="zoom">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <style>
+      .zoom{
+        zoom:90%;
+      }
+      @media only screen and (max-width: 600px) {
+      .zoom {
+       zoom:normal;
+      }
+     }
+    </style>
   </body>
 </html>
